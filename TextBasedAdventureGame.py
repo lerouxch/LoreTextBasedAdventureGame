@@ -1,11 +1,11 @@
 block_letters = r"""
-   sss      eeeeee  rrrrr   iiiiiii         a        l
-ss     ss   e       r    r     I           a a       l
-ss          e       r    r     I          a   a      l
-  sssss     eeee    rrrrr      I         aaaaaaa     l
-       ss   e       r   r      I        a       a    l
-ss     ss   e       r    r     I       a         a   l
-   sss      eeeeee  r     r iiiiiii   a           a  lllllll   
+L         OOOOO   RRRRRR    EEEEEEE
+L        O     O  R     R   E
+L        O     O  R     R   E
+L        O     O  RRRRRR    EEEEE
+L        O     O  R    R    E
+L        O     O  R     R   E
+LLLLLLL   OOOOO   R      R  EEEEEEE   
 """
 
 color_red = "\03391m"
@@ -20,9 +20,9 @@ class Game:
 
     def start(self):
         print(block_letters)
-        print("Welcome to a suspicious and haunting cabin!")
-        print("It's one of those cabins you would normally not go in,")
-        print("but for the sake of the game, we are going to go in anyway.")
+        print("WELCOME! You find yourself standing at the edge of a big forest, not just any forest.")
+        
+        
         # Initialize game logic here
 
     def process_input(self, user_input):
