@@ -20,7 +20,13 @@ class Game:
 
     def start(self):
         print(block_letters)
-        print("WELCOME! You find yourself standing at the edge of a big forest, not just any forest.")
+        print("WELCOME! You find yourself standing at the edge of a big forest, in a world almost like ours.")
+        print("A World riddled in fantasy and LORE, filled with creatures and monsters and more.")
+        print("The forest is huge, stretching from horizon to horizon,")
+        print("eventually you make your way to an opening into the dense brush.")
+        print("The path ahead is dark and shadowed from the sunlight,")
+        print("a cold breeze blows onto you, the road ahead isn't going to be easy.")
+        print("Do you dare to enter the forest??")
         
         
         # Initialize game logic here
