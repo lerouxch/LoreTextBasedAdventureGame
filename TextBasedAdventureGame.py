@@ -31,7 +31,7 @@ class Game:
         
         # Initialize game logic here
 
-    def process_input(self, user_input):
+    def process_input(self, ):
         # Parse user input and update game state
         # Implement logic for different commands (e.g., 'go', 'inspect', 'take', etc.)
         pass
