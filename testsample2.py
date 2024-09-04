@@ -57,6 +57,17 @@ class Player:
                   This sword will definity come in handy if you run into unfriendly creatures.
                   """)
             print("Your health is now: " + print(self.health))
+        if item == 'helm of vigour':
+            self.health += 10
+            print("""
+                  You are most fortunate, this legendary piece of armor was forged in the time of heros long since past.
+                  The blacksmiths of the days of old had special talents and techniques with shaping steel, these
+                  talents and techniques have long since been forgotten.
+                  Yes the items they forged were very beautiful but the real art was the abilities that the blacksmiths
+                  of old working into the steel itself.
+                  The Helm of Vigour is one of these items. It adds 10 points onto your health. 
+                  """)
+            print("Your health is now: " + print(self.health))
         else:
             print(f"{item} is not here.")
 
@@ -150,7 +161,23 @@ def create_forest():
                            the wood now rot with age.
                            Inside you see an elvish sword.  
                      """)
-    clearing3 = Room(""" """)
+    clearing3 = Room("""
+                           Crouching down you break through the overgrown path, giving your eyes some time to adjust to the dim
+                           light.
+                           You look up and see the canopy is very dense, only allowing the smallest of sun beams to penetrate it's
+                           mantle.
+                           Looking down you see the undergrowth and surrounding brush entirely covered by webs.
+                           Clank! Your foot hits something on the floor, carefully you cut away at the thick carpet of web,
+                           revealing an old steel helmet. The Helm of Vigour. This treasure of the age of heros went missing 
+                           many rotations ago, legends say that as the helmets name suggests, increases the helt of the one who wears it.
+                           Disgusted you look cautiously around as to avoid touching the interlacing webbing at all costs.
+                           You see a number of desecrated skeletons on the floor and stuck in the webs that now surround you.
+                           This seems to be the final resting space for many poor souls.
+                           To your horror you see the artist of this webbed crypt you find yourself in.
+                           A spider, much larger than any you've seem before.
+                           The terrible arachnid nibbling on something on the floor, suddenly yet slowly turns around to face you. 
+                     """)
+    clearing4 = Room(""" """)
 
     # Defined exits
     forest_entrance.set_exits({'north': 'cross_roads'})
@@ -158,13 +185,15 @@ def create_forest():
     clearing1.set_exits({'east': 'cross_roads'})
     clearing2.set_exits({'west': 'cross_roads', 'north': 'clearing3'})
     clearing3.set_exits({'south': 'clearing2', 'north': 'clearing4', 'west': 'clearing5'})
+    clearing4.set_exits({'south': 'clearing3'})
 
 
     # Items placed in rooms
     forest_entrance.set_items(['stick'])
     clearing1.set_items(['letter'])
     clearing2.set_items(['elvish sword'])
-    clearing3.set_items([ ])
+    clearing3.set_items(['helm of vigour'])
+    clearing4.set_items([])
 
     # Enemies in rooms
     forest_entrance.set_enemy(None, 0)
@@ -172,6 +201,7 @@ def create_forest():
     clearing1.set_enemy(None, 0)
     clearing2.set_enemy(None, 0)
     clearing3.set_enemy("Spider", 30)
+
     
 
     # Map creation
@@ -181,6 +211,7 @@ def create_forest():
         'clearing1': clearing1,
         'clearing2': clearing2,
         'clearing3': clearing3,
+        'clearing4': clearing4,
     }
 
     return forest_map
