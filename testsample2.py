@@ -36,34 +36,45 @@ class Player:
             print(f"You picked up {item}.")
             if item == 'letter':
                 print("""
-                  To the reader of this letter, 
-                  If you are reading this then that means I am dead.
-                  You have made a grave mistake coming into this forest.
-                  I lost all of my companions one by one trying to navigate and then escape this leafy tomb.
-                  We began to lose our minds with each step we took.
-                  There is something you should know,
-                  this forest is plagued by a witch,  her ancient, terrible power and influence haunts every leaf and twig.
-                  It is said that long ago a mage attempted to discover and defeat the witch but failed to withstand her magic.
-                  There is hope however, the mage's staff is said to be the only item able to defeat her,
-                  but the staff is long lost along with the mage deep in the forest.
-                  Find the staff and defeat the witch, that is your only hope of leaving this terrible place.
+            To the unfortunate soul who reads this,
+            
+            If these words have reached your eyes, then my fate is sealed, and I am no more. 
+            I would beg you, turn back now, but it is already too late. 
+            You have wandered into a place where no living being belongs.
+            
+            This forest… it consumes.
+            I watched my companions fall, one by one, swallowed by the darkness that lives here. 
+            The deeper we ventured, the more the air itself twisted our minds, whispering promises and threats in voices we could not see. 
+            By the end, we were nothing but shadows of who we once were, stumbling through a maze of madness.
+            But it is not the forest you should fear. No… something far worse lurks here. 
+            An ancient witch, a creature of pure malice, dwells within these cursed woods. 
+            Her presence is everywhere, an unseen force guiding every snapped twig, every rustling leaf. 
+            Her power is old, far older than any mortal can comprehend, and her curse lingers over this place like a disease.
+            Long ago, a mage, foolish and brave, tried to challenge her, to free this forest from her grasp. 
+            But he failed. His magic was no match for her dark arts, and now his bones lie forgotten, tangled in roots and vines. 
+            Only his staff, imbued with the last of his power, holds any hope of banishing her… 
+            but it too is lost to the forest, buried with him somewhere in this endless green hell.
+            If you wish to survive, if you wish to escape, you must find the staff. It is the only thing that can destroy her, the only way out. 
+            But be warned: the forest will not give it up easily, and neither will she.
+
+            Godspeed, and may fortune favour thee, for naught else will.
                 """)
             if item == 'sword':
                 self.health += 15
                 print("""
-                  The inscription reads Aicamacil, which when translated means sharp sword. 
-                  This is a truly good find, the perfectly forged ancient blade sits well in your hand.
-                  This sword will definity come in handy if you run into unfriendly creatures.
+            The inscription reads Aicamacil, which when translated means sharp sword. 
+            This is a truly good find, the perfectly forged ancient blade sits well in your hand.
+            This sword will definity come in handy if you run into unfriendly creatures.
                   """)
             if item == 'helm':
                 self.health += 10
                 print("""
-                  You are most fortunate, this legendary piece of armor was forged in the time of heros long since past.
-                  The blacksmiths of the days of old had special talents and techniques with shaping steel, these
-                  talents and techniques have long since been forgotten.
-                  Yes the items they forged were very beautiful but the real art was the abilities that the blacksmiths
-                  of old working into the steel itself.
-                  The Helm of Vigour is one of these items. It adds 10 points onto your health. 
+            You are most fortunate, this legendary piece of armor was forged in the time of heros long since past.
+            The blacksmiths of the days of old had special talents and techniques with shaping steel, these
+            talents and techniques have long since been forgotten.
+            Yes the items they forged were very beautiful but the real art was the abilities that the blacksmiths
+            of old working into the steel itself.
+            The Helm of Vigour is one of these items. It adds 10 points onto your health. 
                   """)    
         else:
             print(f"{item} is not here.")
@@ -137,44 +148,92 @@ class Room:
 def create_forest():
     # Defined Rooms(Clearings)
     forest_entrance = Room("""
-                           You step into the forest, surrounded by tall dark trees and strange noises.
-                           You turn around to find dense bushes and thorns where the forest entrance just was.
-                           You are trapped, nowhere else to go but forward. 
-                           You look ahead and see that there is a dark and seemingly un-ending path leading "North".
+                          You step cautiously into the forest, the towering trees looming overhead, 
+                          their gnarled branches twisting like skeletal hands reaching for you. 
+                          The air is thick with the weight of shadows, and strange, unearthly noises echo through the trees, setting your nerves on edge.
+
+                          When you turn to glance back, your blood runs cold. The entrance you came through is gone, 
+                          replaced by an impenetrable wall of thorn-covered bushes, the vines twisting in ways that seem unnatural, as if alive. 
+                          There is no way back.
+
+                          You are trapped.
+
+                          With no choice but to press onward, your eyes fix on the only path before you a narrow trail that stretches endlessly into the darkness, 
+                          disappearing into the unknown. The wind whispers as it moves through the trees, carrying with it a name you do not recognize, 
+                          and you realize that the only way is "north".
                            """)
     cross_roads = Room("""
-                           You are eventually at a cross roads. The path splits into two. There appears to be clearings both to the "East" and "West" of you.
+                           After what feels like hours of wandering through the oppressive darkness, you find yourself standing at a crossroads. 
+                           The narrow path you have been following splinters into two directions, each more unsettling than the last. 
+                           The forest seems to hold its breath as if watching, waiting for your next move.
+
+                           To the "East", the trees thin slightly, revealing a small, dim clearing bathed in an eerie, unnatural light. 
+                           The ground there is oddly disturbed, as if something has been recently unearthed. 
+                           Faint whispers ride the wind, too low to comprehend, but their presence sends a chill crawling down your spine.
+
+                           To the "West", another clearing beckons, though it is darker, the air there heavier. 
+                           The shadows cling thickly to the ground, and you can feel an oppressive weight pressing on your chest the closer you get. 
+                           A distant, rhythmic sound like the very faint beating of drums or a pulse, echoes from that direction.
+
+                           Both paths feel wrong, and yet, there is no turning back. 
+
+                           You must choose...
                        """)
     clearing1 = Room("""
-                           You find yourself in what looks to be a long since abandoned camp of sorts.
-                           Something bad happened here, upon closer inspection you don't see anywhere else to go but the way you came.
-                           But what's that? You spot a glimmer of faded white from underneath some leaves next to old skeleton.
-                           It's a mysterious "letter".
+                           You stumble into what appears to be the remnants of a long-forgotten camp. 
+                           The air is thick with the scent of decay, and the once-lively space now stands silent, frozen in time. 
+                           Tattered tents sag under the weight of age, and rusted tools lie scattered across the ground, untouched for what feels like centuries. 
+                           The ground is strewn with broken bones—silent witnesses to something terrible that happened here.
+
+                           As you cautiously step further, you realize with growing dread that there is no path forward but only the way you just came. 
+                           But just as you begin to turn, something catches your eye. 
+                           Beneath a pile of rotting leaves and dirt, near the remains of a long-dead skeleton, you spot a faint glimmer. 
+                           A piece of something… white.
+
+                           Kneeling down, your fingers brush away the leaves, revealing an ancient, crumbling "letter" clutched in the bony hand of the corpse. 
+                           The paper is yellowed with age, the ink almost faded, yet somehow it feels… important.
+
+                           The wind stills. The forest grows eerily quiet.
                      """)
     clearing2 = Room("""
-                           You walk into another clearing, You notice that there are paths leading "North" and "West" the way you came.
-                           You see some what apears to be ancient ruins ahead of you.
-                           You step a bit closer and notice that the ruins are elvish.
-                           This must have been a watch tower in the days of old.
-                           They are now covered in vines and shrubs, but if you look closely you can still see 
-                           some marble peeking through. Just a small glimmer of the elegant Elvish architecture.
-                           After looking around for a bit, you find an old, long and flat crate,
-                           the wood now rot with age.
-                           Inside the long forgotten crate you see an elvish "sword".  
+                           You emerge into another clearing, the dense trees parting to reveal a strange and quiet scene before you. 
+                           To the "North", the path stretches further into the forest's shadowy heart, while to the West lies the way you came.
+                           But it is what stands ahead that captures your gaze.
+
+                           Ancient ruins, half swallowed by nature, loom silently before you. As you step closer, the unmistakable craftsmanship is clear. 
+                           These are Elvish ruins, once a proud watchtower from a forgotten age. 
+                           The once-glorious structure is now crumbling, overtaken by vines and dense shrubbery, the stone weathered by time. 
+                           Yet, if you look closely, you can see the smooth marble beneath the wild overgrowth, 
+                           its elegant curves and intricate designs still whispering of the craftsmanship that shaped it.
+
+                           The wind stirs softly, as if the ruins themselves breathe with the memory of those who once guarded this place.
+
+                           After a time of searching, your eyes fall upon an old crate, long and flat, tucked away beneath layers of moss and leaves. 
+                           The wood is fragile, rotted from age, and creaks softly as you pry it open. 
+                           Inside, you find something remarkable, a forgotten Elvish "sword", lying untouched by time. 
+                           It's hilt is engraved with ancient symbols, and though the blade is dulled by the years, it still carries the grace of its Elvish makers, 
+                           glinting faintly in the dim light.
+
+                           This blade was forged for a purpose. You can feel it.
                      """)
     clearing3 = Room("""
-                           Crouching down you break through the overgrown path, giving your eyes some time to adjust to the dim
-                           light.
-                           You look up and see the canopy is very dense, only allowing the smallest of sun beams to penetrate it's
-                           mantle.
-                           Looking down you see the undergrowth and surrounding brush entirely covered by webs.
-                           Clank! Your foot hits something on the floor, carefully you cut away at the thick carpet of web,
-                           revealing an old steel helmet. The "Helm" of Vigour. This treasure of the age of heros went missing 
-                           many rotations ago, legends say that as the helmets name suggests, increases the helt of the one who wears it.
-                           Disgusted you look cautiously around as to avoid touching the interlacing webbing at all costs.
-                           The only visible way forward is a path to the "West" almost completely covered in webs.
-                           You see a number of desecrated skeletons on the floor and stuck in the webs that now surround you.
-                           This seems to be the final resting space for many poor souls.
+                           Crouching low, you push through the overgrown path, branches and vines catching at your clothing as the air grows thick with dampness.
+                           Your eyes slowly adjust to the dim, suffocating light. 
+                           Above, the canopy is dense, a ceiling of leaves so tightly woven that only the faintest slivers of sunlight manage to pierce its dark mantle.
+
+                           As you glance down, your stomach churns. 
+                           The forest floor and surrounding undergrowth are buried beneath a thick, suffocating layer of webs, 
+                           the massive, intricate strands that glisten in the pale light. 
+                           The webbing stretches far, too vast to be the work of any normal spider.
+                           Many a skeleton lay desecrated and entombed in the dense webs.
+
+                           Suddenly CLANK! your foot strikes something solid beneath the mass of webs. Heart racing, you crouch to investigate. 
+                           Using your blade, you cut carefully through the sticky, stubborn strands, revealing what lies beneath. Your breath catches.
+
+                           An ancient, steel "helm" emerges from the webbed shroud, its surface dull and tarnished with time, but unmistakable in design. 
+                           The Helm of Vigour. Once a treasured artifact from the Age of Heroes, it vanished from all knowledge many ages ago. 
+                           Legends whispered of its power, the ability to bestow unnatural endurance upon its wearer, strengthening both body and spirit. 
+                           
                      """)
     clearing4 = Room(""" """)
 
@@ -231,7 +290,7 @@ def combat_loop(player, enemy):
                 player.defend(enemy)
         elif action == 'flee':
             print("You flee to the previous room!")
-            return False  # The player fled, so return False
+            return False  
         else:
             print("Invalid command.")
 
