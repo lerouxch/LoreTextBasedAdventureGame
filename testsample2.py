@@ -65,17 +65,32 @@ class Player:
             The inscription reads Aicamacil, which when translated means sharp sword. 
             This is a truly good find, the perfectly forged ancient blade sits well in your hand.
             This sword will definity come in handy if you run into unfriendly creatures.
+            This adds 15 points to your health.
                   """)
             if item == 'helm':
                 self.health += 10
                 print("""
+            Holding it in you hand sends vibrations up your arms,
+            some of it's legendary essence is still remains. 
             You are most fortunate, this legendary piece of armor was forged in the time of heros long since past.
             The blacksmiths of the days of old had special talents and techniques with shaping steel, these
             talents and techniques have long since been forgotten.
-            Yes the items they forged were very beautiful but the real art was the abilities that the blacksmiths
-            of old working into the steel itself.
+            Yes the items they forged were very beautiful but the real art was the abilities or traits 
+            that the blacksmiths of old worked into the steel itself.
             The Helm of Vigour is one of these items. It adds 10 points onto your health. 
-                  """)    
+                  """) 
+            if item == 'potion':
+                self.health - 15
+                print("""
+                      This fire potion is not one of the good kinds of potion.
+                      As you pour the mysterius liquid down your throat, you feel
+                      the sensation of burning, not a physical burning and as if you
+                      life force is burning up.
+                      This potion has taken away 5 health points.
+                      It would be wise to consider finding a way of finding
+                      some aid to bring your health back up or you won't last
+                      too much longer in this place.
+                    """)   
         else:
             print(f"{item} is not here.")
 
@@ -90,7 +105,7 @@ class Player:
     def attack(self, enemy):
         damage = random.randint(10, 30)
         enemy.health -= damage
-        print(f"You attack the {enemy.name} for {damage} damage!")
+        print(f"You attack {enemy.name} for {damage} damage!")
 
     def combat(self, enemy):
         print(f"A {enemy.name} appears!")
@@ -117,7 +132,7 @@ class Player:
     def defend(self, enemy):
         damage = random.randint(5, 20)
         self.health -= damage
-        print(f"The {enemy.name} attacks you for {damage} damage!")
+        print(f"{enemy.name} attacks you for {damage} damage!")
         if self.health > 0:
             print(f"Your health: {self.health}")
         else:
@@ -167,8 +182,7 @@ def create_forest():
                            The narrow path you have been following splinters into two directions, each more unsettling than the last. 
                            The forest seems to hold its breath as if watching, waiting for your next move.
 
-                           To the "East", the trees thin slightly, revealing a small, dim clearing bathed in an eerie, unnatural light. 
-                           The ground there is oddly disturbed, as if something has been recently unearthed. 
+                           To the "East", the trees thin slightly, revealing a small, dim clearing bathed in an eerie, unnatural light.  
                            Faint whispers ride the wind, too low to comprehend, but their presence sends a chill crawling down your spine.
 
                            To the "West", another clearing beckons, though it is darker, the air there heavier. 
@@ -226,6 +240,8 @@ def create_forest():
                            the massive, intricate strands that glisten in the pale light. 
                            The webbing stretches far, too vast to be the work of any normal spider.
                            Many a skeleton lay desecrated and entombed in the dense webs.
+                           Just barely you see a sliver of light breaking through the webbed wall...
+                           Yes! It is a path to the "West" almost completely hidden by a curtain of silk.
 
                            Suddenly CLANK! your foot strikes something solid beneath the mass of webs. Heart racing, you crouch to investigate. 
                            Using your blade, you cut carefully through the sticky, stubborn strands, revealing what lies beneath. Your breath catches.
@@ -235,7 +251,29 @@ def create_forest():
                            Legends whispered of its power, the ability to bestow unnatural endurance upon its wearer, strengthening both body and spirit. 
                            
                      """)
-    clearing4 = Room(""" """)
+    clearing4 = Room("""
+                           With much disgust, you tear your way through the webbed door that once blocked your path. 
+                           A wave of warm air rushes past you as the clearing reveals itself, a perfect circle of scorched earth, the aftermath of some terrible firestorm. 
+                           Yet the trees surrounding the clearing remain untouched, standing like silent sentinels around this blackened wasteland. 
+                     
+                           The ground beneath your feet is cracked and brittle, black as coal, and the air still carries the acrid scent of burnt wood.
+                           Scattered across the clearing are the twisted remains of creatures reduced to ash and charred bone, 
+                           their burnt shapes barely recognizable as once living creatures. 
+                           A sense of profound desolation weighs heavily on you, as though the souls of those who perished here still linger in the air, watching.
+                           At the centre of this destruction stands a single tree, strangely unharmed.
+                           Its bark gleams unnaturally, smooth and untouched by the flames that ravaged everything around it.  
+                           It seems to pulse with life, its presence both captivating and unsettling, as though it draws strength from the devastation at its feet.
+                     
+                           As you step closer, you feel an oppressive heat radiating from the tree, though no visible flames flicker across its surface. 
+                           The heat grows more intense the nearer you draw, filling the air with a suffocating weight. 
+                           Yet something compels you forward.
+                           Upon closer inspection, you notice a narrow crevice in the tree's bark. Inside, partially hidden, rests a small vial—its glass warm to the touch. 
+                           The liquid inside shimmers with a dangerous light, the substance within swirling with the vibrant hues of flame. 
+                           This is no ordinary “potion”... it is pure fire, a concentrated essence of light or destruction. 
+                           There is only one way to find out which it is...
+                     
+                           Beyond the tree, the path continues to the “North”, beckoning you onward
+                    """)
 
     clearing5 = Room(""" """)
 
@@ -256,13 +294,13 @@ def create_forest():
     clearing1.set_items(['letter'])
     clearing2.set_items(['sword'])
     clearing3.set_items(['helm'])
-    clearing4.set_items([])
+    clearing4.set_items(['potion'])
     clearing5.set_items([])
     clearing6.set_items([])
 
     # Enemies in rooms(clearings)
-    clearing3.set_enemy(Enemy("Spider", 30))
-    clearing5.set_enemy(Enemy(None))
+    clearing3.set_enemy(Enemy("The Great Forest Spider", 54))
+    clearing4.set_enemy(Enemy("The Fire atronach", 65))
     clearing6.set_enemy(Enemy(None))
 
     
@@ -288,21 +326,31 @@ def combat_loop(player, enemy):
             player.attack(enemy)
             if enemy.health > 0:
                 player.defend(enemy)
+
         elif action == 'flee':
             print("You flee to the previous room!")
             return False  
         else:
             print("Invalid command.")
 
+    if player.health <= 0:
+        print("You have been defeated!")
+        return True   #Player loses
+    elif enemy.health <= 0:
+        print(f"You have defeated {enemy.name}!")
+        player.location.enemy = None
+        return False  #Player Wins
+
+
 def game_loop(player, forest_map):
     print(block_letters)
     print(f"WELCOME!, {player.name}. You find yourself standing at the edge of a big forest, in a world almost like ours.")
-    print("A World riddled in fantasy and LORE, filled with creatures and monsters and more.")
-    print("The forest is huge, stretching from horizon to horizon,")
-    print("eventually you make your way to an opening into the dense brush.")
-    print("The path ahead is dark and shadowed from the sunlight,")
-    print("a cold breeze blows onto you, the road ahead isn't going to be easy.")
-    print("For your sake I hope you are ready, the biggest challenge of your life awaits...")
+    print(f"A World riddled in fantasy and LORE, filled with creatures and monsters and more.")
+    print(f"The forest is huge, stretching from horizon to horizon,")
+    print(f"eventually you make your way to an opening into the dense brush.")
+    print(f"The path ahead is dark and shadowed from the sunlight,")
+    print(f"a cold breeze blows onto you, the road ahead isn't going to be easy.")
+    print(f"For your sake I hope you are ready, the biggest challenge of your life awaits...")
     print(player.location.description)
 
     while player.health > 0:
@@ -313,14 +361,14 @@ def game_loop(player, forest_map):
             if enemy:
                 combat_over = combat_loop(player, enemy)
                 if combat_over:
-                    break  # Exit game loop if the player is defeatedp)
+                    break  # Exit game loop if the player is defeated)
         elif command == 'pick up':
             item = input("What do you want to pick up? ").lower()
             player.pick_up_item(item)
         elif command == 'inventory':
             player.show_inventory()
         elif command == 'quit':
-            print("Thanks for playing!")
+            print("No shame in quiting. Thanks for playing!")
             break
         else:
             print("Invalid command.")
