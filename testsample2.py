@@ -43,6 +43,7 @@ class Player:
             You have wandered into a place where no living being belongs.
             
             This forest… it consumes.
+            There will be moments where the forest almost swallows you.
             I watched my companions fall, one by one, swallowed by the darkness that lives here. 
             The deeper we ventured, the more the air itself twisted our minds, whispering promises and threats in voices we could not see. 
             By the end, we were nothing but shadows of who we once were, stumbling through a maze of madness.
@@ -82,15 +83,67 @@ class Player:
             if item == 'potion':
                 self.health - 15
                 print("""
-                      This fire potion is not one of the good kinds of potion.
-                      As you pour the mysterius liquid down your throat, you feel
-                      the sensation of burning, not a physical burning and as if you
-                      life force is burning up.
-                      This potion has taken away 5 health points.
-                      It would be wise to consider finding a way of finding
-                      some aid to bring your health back up or you won't last
-                      too much longer in this place.
-                    """)   
+            This fire potion is not one of the good kinds of potion.
+            As you pour the mysterius liquid down your throat, you feel
+            the sensation of burning, not a physical burning and as if you
+            life force is burning up.
+            This potion has taken away 5 health points.
+            It would be wise to consider finding a way of finding
+            some aid to bring your health back up or you won't last
+            too much longer in this place.
+                    """)
+            if item == 'blue bottle':
+                self.health += 20
+                print("""
+            You reach out with trembling hands and carefully grasp the blue bottle. 
+            The sprite watches in silence, its emotionless gaze unwavering. 
+            As you uncork the bottle, a faint, cool mist escapes, swirling briefly before vanishing into the air.
+                      
+            Hesitant but driven by hope, you bring the bottle to your lips and take a small sip. 
+            The liquid is cool, refreshingly so, sliding down your throat like liquid moonlight. 
+            Almost immediately, you feel a strange hum within your chest, a deep, resonant pulse that spreads through your veins.
+                      
+            Your body surges with renewed vitality. It begins slowly at first, but then, with every passing second, the sensation builds. 
+            A warmth spreads through your limbs, a powerful, invigorating force that pushes away the exhaustion, 
+            the aches, and the weariness that had weighed you down. Your breath steadies, your vision sharpens, and your muscles feel lighter, stronger.
+                      
+            As the energy courses through you, you realise the truth: your choice was indeed wise. 
+            The bottle's gift is not only healing your body, but it seems to be restoring a small part of your spirit, 
+            as though it is giving back what the forest has slowly been stealing from you. Every wound, every bruise, every ounce of fatigue melts away.
+                      
+            You feel a surge of life that you haven't felt in ages. 
+            Rejuvenated, stronger, and clearer of mind, you stand taller, 
+            knowing this small reprieve may be what you need to survive the trials ahead.
+                      
+            It has added 20 points to your health.
+                    """)
+            if item == 'green bottle':
+                self.health - 15
+                print("""
+            Cautiously, you reach out for the green bottle, its glass unnaturally cold in your trembling hand.
+            The still air around you feels thick with anticipation, as though the entire forest is holding its breath. 
+            Slowly, you uncork the bottle, a faint hiss escaping as the seal breaks.
+            The water sprite hovers in silence, watching, and the faces beneath the pond seem to grow more intense in their gaze, 
+            their eyes locked onto you as if they already know your fate.
+                      
+            With your heart pounding, you raise the bottle to your lips, the liquid inside swirling with an unsettling energy. 
+            The sour taste hits your tongue immediately, bitter and unpleasant. You swallow, and for a moment, nothing happens.
+                      
+            Then, without warning, a sharp, searing pain shoots through your chest, as though your heart itself is being clenched by an icy fist. 
+            You gasp for breath as a strange green tinge begins to creep along your veins, spreading like poison beneath your skin. 
+            Your whole body convulses, throbbing with unbearable pain as the venomous energy pulses through you. 
+            Every muscle screams in agony, and your vision begins to blur.
+                      
+            You glance at the water sprite, your last hope for reprieve. But its once emotionless face now twists into a grotesque, mischievous grin. 
+            Its eyes gleam with cruel satisfaction as it watches your suffering. You know, with chilling certainty, that you have made the wrong choice.
+                      
+            The drowned faces beneath the pond seem to mock you, their twisted expressions reflecting the fate that now awaits you. 
+            The sprite's voice echoes in your mind, taunting, though it says nothing aloud. 
+            Your body continues to betray you, wracked with pain and coursing with poison.
+                      
+            You have lost 15 health points.
+                    """)
+             
         else:
             print(f"{item} is not here.")
 
@@ -176,7 +229,7 @@ def create_forest():
                           With no choice but to press onward, your eyes fix on the only path before you a narrow trail that stretches endlessly into the darkness, 
                           disappearing into the unknown. The wind whispers as it moves through the trees, carrying with it a name you do not recognize, 
                           and you realize that the only way is "north".
-                           """)
+                       """)
     cross_roads = Room("""
                            After what feels like hours of wandering through the oppressive darkness, you find yourself standing at a crossroads. 
                            The narrow path you have been following splinters into two directions, each more unsettling than the last. 
@@ -192,7 +245,7 @@ def create_forest():
                            Both paths feel wrong, and yet, there is no turning back. 
 
                            You must choose...
-                       """)
+                     """)
     clearing1 = Room("""
                            You stumble into what appears to be the remnants of a long-forgotten camp. 
                            The air is thick with the scent of decay, and the once-lively space now stands silent, frozen in time. 
@@ -232,7 +285,7 @@ def create_forest():
                      """)
     clearing3 = Room("""
                            Crouching low, you push through the overgrown path, branches and vines catching at your clothing as the air grows thick with dampness.
-                           Your eyes slowly adjust to the dim, suffocating light. 
+                           Your eyes slowly adjust to the dim, suffocating light. The path behind you slowly closes completely blocking any escape. 
                            Above, the canopy is dense, a ceiling of leaves so tightly woven that only the faintest slivers of sunlight manage to pierce its dark mantle.
 
                            As you glance down, your stomach churns. 
@@ -254,7 +307,8 @@ def create_forest():
     clearing4 = Room("""
                            With much disgust, you tear your way through the webbed door that once blocked your path. 
                            A wave of warm air rushes past you as the clearing reveals itself, a perfect circle of scorched earth, the aftermath of some terrible firestorm. 
-                           Yet the trees surrounding the clearing remain untouched, standing like silent sentinels around this blackened wasteland. 
+                           Yet the trees surrounding the clearing remain untouched, standing like silent sentinels around this blackened wasteland.
+                           Once again the forest comsumes the path back, no where else to go but forward. 
                      
                            The ground beneath your feet is cracked and brittle, black as coal, and the air still carries the acrid scent of burnt wood.
                            Scattered across the clearing are the twisted remains of creatures reduced to ash and charred bone, 
@@ -272,21 +326,85 @@ def create_forest():
                            This is no ordinary “potion”... it is pure fire, a concentrated essence of light or destruction. 
                            There is only one way to find out which it is...
                      
-                           Beyond the tree, the path continues to the “North”, beckoning you onward
-                    """)
+                           Beyond the tree, the path continues to the “North”, beckoning you onward.
+                     """)
+    clearing5 = Room(""" 
+                           Exhausted, your mind teeters on the edge of collapse, the forest's relentless grip fraying your sanity with every passing step. 
+                           You stumble into a clearing, and immediately, a strange stillness settles over you. 
+                           The air is unnervingly calm, as though the entire world holds its breath. 
+                           The ground beneath your feet is smooth, unnaturally solid stone, curving downward into a shallow depression at the centre.
+                           
+                           You glance back, but dread settles in your stomach. The path behind you is no more, swallowed whole by dense thorns and tangled vines. 
+                           There is no turning back. The only way forward is a narrow path leading “East”, but before you can move, your eyes are drawn to the clearing's centre.
+                           There, a perfectly still pond rests, it's dark and murky water reflecting the pale, sickly sky above. 
+                           The surface is unnaturally calm, unnervingly so, like a mirror untouched by time or nature. 
+                           As you step closer, something catches your eye. Faces, faint but distinct, just beneath the water's surface. 
+                           Their ghostly forms are twisted and warped, some serene, others contorted in agony, their hollow eyes following your every movement. 
+                           The air grows heavier as you stare back at them, your heart pounding in your chest.
+                           The deeper you gaze, the more the pond pulls at you, as though it wishes to swallow you whole. 
+                           But just as you feel the weight of the water drawing you closer, a soft glow begins to rise from the depths. 
+                           The light grows brighter, moving swiftly upward, cutting through the dark water like a blade. Without so much as a ripple, a figure emerges.
+                           
+                           A water sprite.
+                           
+                           The ethereal creature hovers just above the pond, its pale blue skin shimmering in the dim light. 
+                           Its eyes are dark, emotionless, staring through you as though you were nothing but a passing thought. 
+                           The sprite's presence is unnerving, but it does not seem hostile. 
+                           Instead, it moves with a haunting grace, its delicate form suspended between this world and the depths below.
+                           Slowly, it raises its arms, revealing two clenched fists. 
+                           The air around you seems to hum with unseen tension. 
+                           
+                           One by one, finger by finger, the sprite's hands open, revealing what lies within. 
+                           In it's left hand rests a small, shimmering “blue bottle”, its surface glowing faintly like the light of a star. 
+                           In it's right hand, a “green bottle”, equally small but swirling with an unsettling energy, as though something within it hungers.
+                           
+                           The sprite speaks, its voice soft but chilling, each word lingering in the air like a cold breath.
+                           "You have a choice," it says in a slow, eerie, feminine whisper. 
+                           "Choose wisely, for your very life depends on it. One can give... and one can take. Which will you pick up?"
+                           
+                           The bottles glimmer in the sprite's hands, and the weight of the decision presses down on you. 
+                           The faces beneath the water continue to watch, their eyes pleading, warning, or mocking. 
+                     
+                           The wrong choice could seal your fate. 
+                     """)
 
-    clearing5 = Room(""" """)
-
-    clearing6 = Room(""" """)
+    clearing6 = Room("""
+                           As you break into the clearing, a wave of unease washes over you. The first thing you notice is the absence of any visible paths. 
+                           The forest seems to have abandoned this place entirely, leaving it to rot in isolation. 
+                           The air is thick with the pungent scent of decay, heavy and suffocating, as if the clearing itself is steeped in death. 
+                           No plants grow here, no animals stir, this is a place where life has long since withered away.
+                      
+                           At the heart of the clearing lies an enormous tree stump, leaning ominously toward the north. 
+                           It's massive form is hollowed out, a dark cavity sinking into the earth. Glowing fungi cling to its surface, 
+                           their eerie light pulsating like a sick heartbeat. 
+                           The sickly glow casts unnatural shadows, flickering faintly, as if the stump itself still holds some twisted life force. 
+                           The ground beneath your feet feels damp, almost spongy, with the rot that seems to seep from the stump into the earth around it.
+                     
+                           As you take a cautious step closer, your ears pick up the faint sounds from within the hollow, a scratching, rustling noise, 
+                           like something lurking deep inside. The noise is unsettling, as though something unseen stirs within the decaying wood. 
+                           Your gaze shifts, and you notice something even more disturbing: small, childlike handprints smeared along the edges of the hollow, 
+                           dark and dried, their shapes faded but unmistakable. The prints are old, yet they cling to the stump as a warning or perhaps showing the path forward.
+                     
+                           The stump's interior spirals downward into the earth, a gaping maw leading into the unknown. 
+                           The hollow appears large enough for you to descend into, though every instinct screams at you to turn back. 
+                           Yet, there is no other path, the only way forward is “north”, into the underground darkness. 
+                     
+                           The noises from within grow louder, more insistent, as if calling to you. 
+                           There is a strange, almost inviting pull in the air, coaxing you to step inside the stump's dark mouth and follow the descent into the depths below.
+                           
+                           Whatever lies within is waiting.
+                     """)
 
     # Defined exits
     forest_entrance.set_exits({'north': 'cross_roads'})
     cross_roads.set_exits({'south': 'forest_entrance', 'west': 'clearing1', 'east': 'clearing2' })
     clearing1.set_exits({'east': 'cross_roads'})
     clearing2.set_exits({'west': 'cross_roads', 'north': 'clearing3'})
-    clearing3.set_exits({'south': 'clearing2', 'west': 'clearing4'})
-    clearing4.set_exits({'east': 'clearing3', 'north': 'clearing5'})
-    clearing5.set_exits({'south': 'clearing4', 'east': 'clearing6'})
+    clearing3.set_exits({'west': 'clearing4'})
+    clearing4.set_exits({'north': 'clearing5'})
+    clearing5.set_exits({'east': 'clearing6'})
+    clearing6.set_exits({'north': 'clearing7'})
+
 
 
     # Items placed in rooms
@@ -295,13 +413,13 @@ def create_forest():
     clearing2.set_items(['sword'])
     clearing3.set_items(['helm'])
     clearing4.set_items(['potion'])
-    clearing5.set_items([])
+    clearing5.set_items(['blue bottle', 'green bottle'])
     clearing6.set_items([])
 
     # Enemies in rooms(clearings)
     clearing3.set_enemy(Enemy("The Great Forest Spider", 54))
     clearing4.set_enemy(Enemy("The Fire atronach", 65))
-    clearing6.set_enemy(Enemy(None))
+    
 
     
 
@@ -314,6 +432,7 @@ def create_forest():
         'clearing3': clearing3,
         'clearing4': clearing4,
         'clearing5': clearing5,
+        'clearing6': clearing6,
     }
 
     return forest_map
