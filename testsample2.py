@@ -367,7 +367,6 @@ def create_forest():
                      
                            The wrong choice could seal your fate. 
                      """)
-
     clearing6 = Room("""
                            As you break into the clearing, a wave of unease washes over you. The first thing you notice is the absence of any visible paths. 
                            The forest seems to have abandoned this place entirely, leaving it to rot in isolation. 
@@ -394,6 +393,35 @@ def create_forest():
                            
                            Whatever lies within is waiting.
                      """)
+    clearing7 = Room("""
+                           You step cautiously into the abyss, the light from the clearing fading behind you as the tunnel swallows you whole. 
+                           Your footsteps echo in the tight, narrow passage, the ceiling just low enough that the roots of the cursed trees above brush against your head and shoulders.
+                           The air is thick, oppressive, the weight of the forest still hanging over you, even beneath the ground. 
+                           Your eyes struggle to adjust to the gloom, the darkness swallowing all but the faintest outlines of the path ahead.
+                      
+                           As you descend, the faint glow of fungi begins to light the way, their sickly greenish light pulsing erratically, 
+                           as if struggling to push back the overwhelming darkness. The deeper you go, the stronger a pungent odour grows, 
+                           filling your nostrils with the smell of rot and decay. The air is warm and moist, clinging to your skin like a second layer, 
+                           leaving a sense of unease in the pit of your stomach. You notice a path to the “west” and “north”, 
+                           a gentle reminder to be mindful of where you go, getting lost could seal your fate.
+                      
+                           Finally, the narrow tunnel opens up into a cavern, barely illuminated by the fungi clinging to the walls. 
+                           The flickering light casts long shadows that dance eerily across the uneven stone. You stop in your tracks as a wave of nausea hits you, 
+                           the stench in here overpowering. The warm, stagnant air presses against your skin, thick with the smell of death and old blood.
+                     
+                           The floor of the cavern is littered with skeletons, their twisted forms sprawled in unnatural positions. 
+                           They are not human. You crouch down to examine one and realise, with growing horror, 
+                           that they resemble elves but these elves had been horrifically transformed, their bones warped as if they had been tortured or twisted by some dark force. 
+                           Their elongated limbs and disfigured skulls suggest a kind of suffering beyond what flesh could endure.
+                     
+                           Your heart pounds in your chest as you scan the area. This place is an orc hole, you realise, the remnants of a den long since abandoned… or so you hope. 
+                           The sight of the tortured elven remains suggesting the dark and terrible creation of an orc.
+                           The cavern is eerily quiet, but the unease in your gut refuses to fade. 
+                           The dim light of the fungi flickers, casting fleeting glimpses of shadows that seem to shift when you're not looking directly at them. 
+                           You hope the orcs are long gone, but the faint, distant sounds of scraping stone and low guttural noises make you fear otherwise.
+                           
+                           There is no turning back now.
+                     """)
 
     # Defined exits
     forest_entrance.set_exits({'north': 'cross_roads'})
@@ -404,6 +432,7 @@ def create_forest():
     clearing4.set_exits({'north': 'clearing5'})
     clearing5.set_exits({'east': 'clearing6'})
     clearing6.set_exits({'north': 'clearing7'})
+    clearing7.set_exits({'south': 'clearing6', 'west': 'clearing8', 'north': 'clearing9'})
 
 
 
@@ -419,6 +448,7 @@ def create_forest():
     # Enemies in rooms(clearings)
     clearing3.set_enemy(Enemy("The Great Forest Spider", 54))
     clearing4.set_enemy(Enemy("The Fire atronach", 65))
+    clearing7.set_enemy(Enemy("Borzug the Dark Orc", 62))
     
 
     
@@ -433,6 +463,7 @@ def create_forest():
         'clearing4': clearing4,
         'clearing5': clearing5,
         'clearing6': clearing6,
+        'clearing7': clearing7,
     }
 
     return forest_map
