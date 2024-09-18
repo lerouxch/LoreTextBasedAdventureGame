@@ -143,6 +143,29 @@ class Player:
                       
             You have lost 15 health points.
                     """)
+            if item == 'hat':
+                self.health += 5
+                print("""
+            You carefully pick up the mage's hat, its fabric fragile and worn with age. As your fingers brush against it, you feel an odd sensation,
+            a faint pulse of warmth, like the dying embers of a once mighty fire. The hat, though delicate and frayed, 
+            still holds a faint glimmer of the mage's ancient power. 
+            It's subtle, but undeniable, a small, yet powerful reminder that hope remains, even in this forsaken place.
+                      
+            Clutching the hat, you feel a sense of purpose wash over you. It's as if a fragment of the mage's will has been passed onto you, 
+            guiding you toward your goal.
+            Though the witch's dark influence looms heavy in the air, this hat represents a shred of resistance, 
+            a piece of the puzzle that may yet lead you to the staff, the only weapon capable of defeating her and breaking free from this cursed forest.
+                      
+            The road ahead is treacherous, the horrors of the cave and the forest still lurking, but the hat's faint magic hums in your hands. 
+            It strengthens your resolve. You know now that the mage came this way, and though their fate remains unknown, 
+            they left behind this small beacon, urging you onward.
+            
+            You clutch the mage's hat tightly, knowing it may be your only link to survival. 
+            With renewed determination, you press forward, the path toward the north beckoning you deeper into the unknown. 
+            Somewhere ahead, the staff awaits, and with it, the slim chance of defeating the witch and escaping this nightmare.
+            
+            The hat gives you 5 health points.
+                    """)
              
         else:
             print(f"{item} is not here.")
@@ -228,7 +251,7 @@ def create_forest():
 
                           With no choice but to press onward, your eyes fix on the only path before you a narrow trail that stretches endlessly into the darkness, 
                           disappearing into the unknown. The wind whispers as it moves through the trees, carrying with it a name you do not recognize, 
-                          and you realize that the only way is "north".
+                          and you realise that the only way is "north".
                        """)
     cross_roads = Room("""
                            After what feels like hours of wandering through the oppressive darkness, you find yourself standing at a crossroads. 
@@ -248,11 +271,11 @@ def create_forest():
                      """)
     clearing1 = Room("""
                            You stumble into what appears to be the remnants of a long-forgotten camp. 
-                           The air is thick with the scent of decay, and the once-lively space now stands silent, frozen in time. 
+                           The air is thick with the scent of decay, and the once lively space now stands silent, frozen in time. 
                            Tattered tents sag under the weight of age, and rusted tools lie scattered across the ground, untouched for what feels like centuries. 
-                           The ground is strewn with broken bones—silent witnesses to something terrible that happened here.
+                           The ground is strewn with broken bones, silent witnesses to something terrible that happened here.
 
-                           As you cautiously step further, you realize with growing dread that there is no path forward but only the way you just came. 
+                           As you cautiously step further, you realise with growing dread that there is no path forward but only the way you just came. 
                            But just as you begin to turn, something catches your eye. 
                            Beneath a pile of rotting leaves and dirt, near the remains of a long-dead skeleton, you spot a faint glimmer. 
                            A piece of something… white.
@@ -422,6 +445,36 @@ def create_forest():
                            
                            There is no turning back now.
                      """)
+    clearing8 = Room(""" 
+                           You step into the cave, moving cautiously through the dim light cast by the familiar glow of the fungi.
+                           The air is thick and heavy, the scent of decay mingling with the damp earth around you. 
+                           As your eyes adjust, you notice the walls, they're covered in carved faces, twisted in expressions of sheer terror, agony, and despair. 
+                           Each one appears to be caught in the throes of a silent scream, mouths wide open as though trapped in an eternal torment. 
+                           The longer you look, the more unsettling the sight becomes. The faces seem almost too real, as if they were once alive and somehow fused with the rock, 
+                           their torment forever etched into the stone. The path continues on to the “north”.
+                     
+                           Occasionally, the silence is pierced by faint moans or distant, muffled cries. 
+                           It's unclear whether these are echoes of the past or something more sinister, as though the very walls are haunted by the souls of those who ventured too far.
+                           The cries seem to come from within the stone itself, disembodied and desperate, as if some of the faces are still alive, 
+                           trapped in an eternity of suffering.
+                     
+                           You cautiously approach the central pillar. From afar, it appears to be a simple stone column, but as you step closer, you see it too is carved into a face. 
+                           The right side is contorted in a look of pure, unrelenting horror, as if the figure had witnessed something beyond comprehension. 
+                           The left side of the face is frozen in an expression of excruciating pain, 
+                           it's features twisted and unnatural, as though carved in the midst of unbearable suffering.
+                     
+                           As you circle the pillar, your gaze falls upon something on the ground. 
+                           A piece of fabric, old and covered in dust, lies against the base of the pillar. 
+                           You crouch down, gently brushing the dust away with trembling hands. What you uncover sends a shiver of hope through you—a mage's “hat”, 
+                           withered and faded by time. The material is delicate, but unmistakable, and though it's worn, the distinct shape is clear.
+                     
+                           The mage passed through here. You are on the right track. Though the surroundings are haunting and oppressive, 
+                           this small discovery fills you with a flicker of hope. The mage once stood where you stand now, and perhaps he, too, 
+                           heard the cries of the trapped souls and felt the same dread creeping into their bones.
+                     """)
+    clearing9 = Room("""
+                           
+                     """)
 
     # Defined exits
     forest_entrance.set_exits({'north': 'cross_roads'})
@@ -433,6 +486,8 @@ def create_forest():
     clearing5.set_exits({'east': 'clearing6'})
     clearing6.set_exits({'north': 'clearing7'})
     clearing7.set_exits({'south': 'clearing6', 'west': 'clearing8', 'north': 'clearing9'})
+    clearing8.set_exits({'north': 'clearing10', 'east': 'clearing7'})
+    clearing9.set_exits({'north': 'clearing11', 'west': 'clearing10', 'south': 'clearing7'})
 
 
 
@@ -443,7 +498,7 @@ def create_forest():
     clearing3.set_items(['helm'])
     clearing4.set_items(['potion'])
     clearing5.set_items(['blue bottle', 'green bottle'])
-    clearing6.set_items([])
+    clearing6.set_items(['hat'])
 
     # Enemies in rooms(clearings)
     clearing3.set_enemy(Enemy("The Great Forest Spider", 54))
