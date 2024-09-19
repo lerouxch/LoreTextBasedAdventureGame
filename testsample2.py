@@ -28,7 +28,7 @@ class Player:
         else:
             print("The forest is too dense. You can't go that way!")
 
-
+    #Item pick up loop and Item descriptions
     def pick_up_item(self, item):
         if item in self.location.items:
             self.inventory.append(item)
@@ -473,8 +473,76 @@ def create_forest():
                            heard the cries of the trapped souls and felt the same dread creeping into their bones.
                      """)
     clearing9 = Room("""
-                           
+                           You step into the dimly lit cave, the ever-present glow of the fungi clinging to the walls casting an eerie light across the space. 
+                           The cave is vast, its ceiling arching high above like a stone cathedral, dripping with stalactites that gleam faintly in the soft, pulsing light. 
+                           The air is damp, with the faint sound of dripping water echoing through the chamber, creating an unsettling rhythm in the silence.
+                     
+                           The floor is uneven, jagged rocks protruding from the ground, making each step uncertain. 
+                           In the distance, you notice a faint breeze coming from the “north”, where an opening seems to lead out of this cavernous space. 
+                           The air from that direction feels slightly fresher, a sign that this might be a way forward, perhaps even an exit, though the forest 
+                           beyond promises its own dangers.
+                     
+                           To the “west”, another tunnel yawns open, its entrance wide and foreboding. 
+                           This passage is darker, the fungi's glow barely reaching into the mouth of the cave. You can't see far down this western path, 
+                           but the faintest of sounds, perhaps a shuffling or distant echo, emanates from the darkness within, hinting that something may lie in wait, 
+                           or that the cave itself holds more secrets yet to be uncovered.
+                     
+                           Between the northern exit and the western cave, a choice looms. The unknown darkness to the west calls out, 
+                           while the path to the north offers a hint of escape.
                      """)
+    clearing10 = Room(""" 
+                           You step into the chamber, and the first thing that strikes you is the overwhelming sense of dread. The air is thick, stagnant, 
+                           carrying the faint, sickly scent of decay. All around, the walls and floor are littered with bones, not merely discarded, 
+                           but arranged with nightmarish intent. Skeletons of humans and creatures alike are posed in twisted tableaux, locked forever 
+                           in their final, torturous moments.
+                      
+                           One skeleton hangs limply from the ceiling, bound by strands of dark, fibrous material, its arms stretched unnaturally high as if it had been 
+                           pulled apart slowly. Nearby, a pair of human skeletons are arranged face-to-face, their bony hands gripping each other's necks, caught in an eternal, 
+                           silent struggle. Animal skulls line the edges of the room, staring with empty eye sockets as though they, too, bear witness to the torment on display.
+                      
+                           The dark fibres that bind them are grotesque, organic strands that weave through the bones like a grotesque web, holding them in place 
+                           as if part of some twisted art. The fibres pulse faintly, almost as if they are still alive, snaking through ribs and spines, 
+                           adding an eerie semblance of movement to the still, lifeless forms.
+                      
+                           Each scene is more horrifying than the last creatures twisted into poses of agony, humans frozen in desperate pleas for mercy. 
+                           Some are kneeling, hands clasped together in silent prayer, while others are sprawled across the floor, their faces contorted into expressions of terror, 
+                           jaws agape in screams that will never be heard.
+                       
+                           As you move deeper into the chamber, you hear it, the faintest rattling of bones. It's soft, almost imperceptible at first, 
+                           but it grows louder with each step. The sound doesn't come from one place, but from everywhere at once. You freeze, eyes darting from 
+                           one grotesque display to another, but nothing moves. The bones remain still, yet the sound continues, a rhythmic, unnatural clinking, 
+                           as if the skeletons are shifting just out of sight, aware of your presence, waiting for something.
+                      
+                           Above you, the ceiling seems to writhe with bones, smaller skeletons, perhaps children, bound together in an intricate, macabre spiral, 
+                           their faces turned toward the centre of the chamber, as if in worship of some unseen horror. 
+                           The sight fills you with a sickening realisation: this place is a shrine, and the bones its unwilling congregation.
+                      
+                           The walls seem to breathe, the fibrous strands tightening, pulling the skeletons ever closer to you. The rattling grows, 
+                           and you realise, with mounting dread, that you are not alone in this chamber. You notice a path towards the "east”, 
+                           a hope of escape of this room chamber of nightmares
+                      """)
+    clearing11 = Room("""
+                           You stumble forward, your breath echoing off the wet stone walls of the cave as you near its exit. The damp air clings to your skin, 
+                           and the sharp scent of mould fills your lungs. The faint light ahead grows brighter as you take the final steps toward freedom. 
+                           But as you emerge from the cave's maw, you feel no relief, only an unsettling chill crawling up your spine.
+                      
+                           The transition is abrupt. The oppressive darkness of the cave gives way to a dense fog that swirls through a spooky forest clearing. 
+                           The air is unnervingly still, thick with the scent of damp earth and decay. Every tree surrounding the clearing is gnarled and twisted, 
+                           their blackened branches reaching upward like skeletal fingers clawing at the sky. The bark appears to be burned or diseased, 
+                           riddled with a familiar pulsing fungi that give off a sickly glow, casting unnatural shadows that dance across the ground.
+                      
+                           The clearing itself feels wrong, as though you've stepped into a place that should not exist. The ground beneath your feet is soft and spongy, 
+                           but when you look down, you see no grass, no moss, only a thin layer of rotting leaves that squelch with every step. 
+                           In the centre of the clearing stands a lone, barren tree, its massive trunk warped and hollow. Despite the stillness, the hollow seems to whisper faintly, 
+                           carrying voices that flicker in and out of your perception like a half-forgotten memory.
+                      
+                           A light breeze stirs the fog, revealing shadowy shapes hidden amongst the trees. You blink, and they're gone, as if they were never there. 
+                           Yet the feeling of being watched is impossible to shake. Somewhere in the distance, a low, mournful wail echoes through the woods, 
+                           followed by the rustling of unseen creatures moving just beyond the edge of your sight.
+                      
+                           The clearing seems alive, waiting, watching, and the only visible path leads deeper ”north” into the forest, where the darkness grows thicker, 
+                           the trees more twisted. The oppressive silence weighs on you, and you sense that this is no place to linger.
+                      """)
 
     # Defined exits
     forest_entrance.set_exits({'north': 'cross_roads'})
@@ -488,6 +556,8 @@ def create_forest():
     clearing7.set_exits({'south': 'clearing6', 'west': 'clearing8', 'north': 'clearing9'})
     clearing8.set_exits({'north': 'clearing10', 'east': 'clearing7'})
     clearing9.set_exits({'north': 'clearing11', 'west': 'clearing10', 'south': 'clearing7'})
+    clearing10.set_exits({'south': 'clearing8', 'east': 'clearing9'})
+    clearing11.set_exits({'north': 'clearing12', 'south': 'clearing9'})
 
 
 
@@ -504,6 +574,7 @@ def create_forest():
     clearing3.set_enemy(Enemy("The Great Forest Spider", 54))
     clearing4.set_enemy(Enemy("The Fire atronach", 65))
     clearing7.set_enemy(Enemy("Borzug the Dark Orc", 62))
+    clearing10.set_enemy(Enemy("The Bonecrawler", 35))
     
 
     
@@ -519,12 +590,15 @@ def create_forest():
         'clearing5': clearing5,
         'clearing6': clearing6,
         'clearing7': clearing7,
+        'clearing8': clearing8,
+        'clearing9': clearing9,
+        'clearing10': clearing10,
     }
 
     return forest_map
 
 def combat_loop(player, enemy):
-    """Handles combat between player and enemy."""
+    #Handles combat between player and enemy.
     while enemy.health > 0 and player.health > 0:
         action = input("\nWhat do you want to do? (attack, flee): ").lower()
         if action == 'attack':
