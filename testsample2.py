@@ -202,7 +202,7 @@ class Player:
             5 health points are added.
                       """)
             if item == 'golden':
-                self.health += 20
+                self.health += 15
                 print("""
             You cautiously pick up the golden mushroom, its delicate white spots almost glowing in the sickly, dim light of the clearing. 
             The deep golden sheen reflects the surrounding gloom, creating an eerie but captivating contrast. 
@@ -218,7 +218,24 @@ class Player:
 
             For the first time in what feels like ages, you feel truly alive.
 
-            This golden treasure has added 20 health points.
+            This golden treasure has added 15 health points.
+                      """)
+            if item == 'apple':
+                self.health += 15
+                print("""
+            You reach up and grasp the apple, and it feels refreshingly cool in your hand, as if it had been plucked fresh from a morning dew soaked orchard. 
+            Tiny droplets of moisture cling to its surface, offering a momentary balm to your parched, cracked fingers, a small relief in this forsaken forest.
+            You can't resist, you raise it to your mouth and take a big, hungry bite.
+
+            The skin gives way with a crisp snap, and immediately your mouth is flooded with cool, sweet juice. The freshness of the apple is unlike anything you've 
+            experienced in ages, and the tangy liquid spills over your dry, chapped lips, running down your chin in sticky rivulets. 
+            It quenches not only your thirst but also your parched spirit, the sweetness overwhelming your senses as if it had been made to revitalise the weary.
+
+            As you swallow, you feel the cool juice travel down your throat, refreshing you from the inside out. The sensation spreads throughout your body, 
+            like ice water coursing through your veins, momentarily washing away the fatigue and darkness that have clung to you for so long. 
+            You close your eyes, savouring the moment, feeling a sense of renewal for the first time since stepping foot in this cursed place.
+
+            This added 15 much needed health points.
                       """)
              
         else:
@@ -676,7 +693,28 @@ def create_forest():
                            and the threads stretch taut across the bark, pulling the tree into a grotesque and unnatural shape. You feel the pull grow stronger, 
                            and though your instincts scream to turn back, you are inexorably drawn toward the looming tree and whatever terrible secret it holds. 
                            
-                           Your only way forward is “North”.
+                           Your only way forward is “North” deeper into the forest and "South" maybe there's another path untaken...
+                      """)
+    clearing16 = Room("""
+                           The forest is growing drastically darker with each step you take, the oppressive gloom sinking into your skin like a cold, suffocating weight. 
+                           Your mind drifts, trying to recall the warmth of sunlight or the feel of a breeze on your face, but those memories are distant, fading. 
+                           It feels as though it's been an eternity since your lungs tasted fresh air, and your body is starting to fail, 
+                           drained by the relentless encounters with the creatures that haunt this cursed place.
+ 
+                           Stumbling forward, you suddenly find yourself in a clearing, and your breath catches—there, amid the endless shadow, 
+                           a single broad sunbeam pierces the thick canopy, casting its warm glow onto a vibrant tree in the centre. The tree is an anomaly, 
+                           its thick, glimmering leaves shimmer in the sunlight, pushing back the darkness that encircles the clearing like a predator lying in wait. 
+                           The air is different here, lighter, easier to breathe, and your eyes, weary from the relentless gloom, 
+                           are soothed by the sight of the lush, thriving tree.
+
+                           As you step closer, you spot a single plump, juicy “apple” hanging from one of its branches, its skin glistening like a precious jewel in the sunlight. 
+                           The sight makes your mouth water; hunger gnaws at you, and the thought of biting into something so ripe, so full of life, 
+                           is almost too tempting to resist. Yet, a familiar chill creeps down your spine. This forest has taught you well, nothing here is what it seems.
+
+                           The apple dangles there, so close, the temptation almost unbearable. But you hesitate, knowing that in this place of twisted magic and lurking evil, 
+                           even the most beautiful things could be laced with unspeakable danger. 
+
+                           The only way ahead is a path that veers to the “East”.
                       """)
 
     # Defined exits
@@ -696,7 +734,7 @@ def create_forest():
     clearing12.set_exits({'south': 'clearing11', 'west': 'clearing13', 'east': 'clearing14', 'north': '15'})
     clearing13.set_exits({'north': 'clearing16'})
     clearing14.set_exits({'north': 'clearing17'})
-    clearing15.set_exits({'north': 'clearing18'})
+    clearing15.set_exits({'north': 'clearing18', 'south': 'clearing12'})
     clearing16.set_exits({'east': 'clearing15'})
 
 
@@ -710,6 +748,8 @@ def create_forest():
     clearing5.set_items(['blue bottle', 'green bottle'])
     clearing6.set_items(['hat'])
     clearing12.set_items(['robe'])
+    clearing13.set_items(['white', 'golden'])
+    clearing16.set_items(['apple'])
 
     # Enemies in rooms(clearings)
     clearing3.set_enemy(Enemy("The Great Forest Spider", 54))
