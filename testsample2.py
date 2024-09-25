@@ -166,6 +166,60 @@ class Player:
             
             The hat gives you 5 health points.
                     """)
+            if item == 'robe':
+                self.health += 10
+                print("""
+            This is indeed the mage's robe. You are clearly on the right path. Long ago, the mage passed through this very spot, 
+            leaving this piece of their journey behind. The fabric is ancient, worn and weathered by time, 
+            but surprisingly well preserved despite the harsh elements of the forest. 
+            Its deep, faded colour still holds a faint shimmer of its once great magic.
+            
+            As you drape it around your shoulders, an unexpected warmth envelops you, almost like a gentle embrace. 
+            The robe clings to you, its warmth sinking deep into your bones, soothing your aching body with each passing second. 
+            A sense of comfort and protection washes over you, as though the mage's power lingers within the fabric, 
+            offering you the strength to continue your perilous journey.
+            
+            You feel a renewed surge of energy, your mind sharpens, and for the first time in a while, a small flicker of hope stirs within. 
+            The robe seems to hum with a quiet, ancient magic, a promise of guidance as you press forward. 
+            
+            It adds 10 health points.
+                      """)
+            if item == 'white':
+                self.health += 5
+                print("""
+            You carefully pick up the white mushroom with red spots on its cap, its vibrant colour standing out unnaturally in the eerie clearing. 
+            Hesitantly, you bring it to your lips, the smooth texture feeling strange in your hand. With a small breath, you bite down. The taste is peculiar, 
+            not entirely unpleasant, though there's a bitter edge that lingers on your tongue.
+            
+            At first, nothing happened. Then, slowly, you feel a subtle change. Your muscles relax, and the weight of 
+            exhaustion you've carried for so long seems to lift just a little.
+            A small calmness spreads through your body, as though some of the ever present tension has released its grip.
+            Your hunger, gnawing at you for hours, is a little diminished, and you realise with relief that the mushroom, against all odds, was not poisonous.
+            
+            A strange sense of ease settles over you, your mind feels clearer, and though the forest still presses in from all sides, 
+            the danger of this moment seems less immediate.
+                      
+            5 health points are added.
+                      """)
+            if item == 'golden':
+                self.health += 20
+                print("""
+            You cautiously pick up the golden mushroom, its delicate white spots almost glowing in the sickly, dim light of the clearing. 
+            The deep golden sheen reflects the surrounding gloom, creating an eerie but captivating contrast. 
+            You hesitate for a moment, but the allure of its shimmering surface is too tempting to resist. Slowly, you bring it to your lips and bite down.
+
+            The taste surprises you. It's sweet, far sweeter than you expected, with an oddly delightful flavour that melts across your tongue, 
+            completely unlike any mushroom you've ever encountered. For a moment, the bizarre world around you fades as the richness of the mushroom fills your senses.
+
+            Then, suddenly, an intense sensation surges through your body. It feels as though a great weight has been lifted from your tired, aching shoulders. 
+            The fatigue that had clung to you for so long dissipates, and a powerful sense of renewal sweeps over you. Your hunger vanishes, 
+            leaving you feeling unexpectedly full, and your mind clears with startling clarity. It's as if the fog that clouded your thoughts has been lifted, 
+            replaced by a sharp focus and newfound energy.
+
+            For the first time in what feels like ages, you feel truly alive.
+
+            This golden treasure has added 20 health points.
+                      """)
              
         else:
             print(f"{item} is not here.")
@@ -543,6 +597,87 @@ def create_forest():
                            The clearing seems alive, waiting, watching, and the only visible path leads deeper ”north” into the forest, where the darkness grows thicker, 
                            the trees more twisted. The oppressive silence weighs on you, and you sense that this is no place to linger.
                       """)
+    clearing12 = Room("""
+                           You step into the clearing, and a strange silence falls over you. Before you stretches a field of scarecrows, 
+                           each one standing crooked and lifeless among the tall, dry grass. Their bodies are fashioned from twisted, rotting wood and faded cloth, 
+                           and their heads are a grotesque mix of sacks, bones, and masks, all with tattered hats perched on top. 
+                           Their faces are distorted, painted in crude, unnatural expressions, some smiling, others glaring with hollow, 
+                           empty eyes. You see the path breaks off into three directions, “North”, “East” and “West”. On an empty pole in more or less of the centre of the 
+                           clearing, you see an old "robe" hanging on the rotting pole. Could it be? Could it be the mages robe?
+
+                           The air is still and heavy, with no breeze to stir the grass or the crows perched in the distance. 
+                           As you cautiously begin walking through the field, the overwhelming sense that you are being watched creeps over you.
+                           You quicken your pace, the tall, skeletal forms of the scarecrows lining the path, standing motionless, but something is wrong.
+
+                           From the corner of your eye, you swear you see one of the heads move. A subtle, almost imperceptible shift. 
+                           You stop, heart pounding, and turn your head to check—but the scarecrow remains still, its crude face staring blankly ahead. 
+                           With each step, the sensation intensifies. Their heads slowly turn, just at the edge of your vision, following your every move. 
+                           The further you walk, the more certain you are that they're watching you, but when you look directly at them, 
+                           they're always frozen in place—silent, unmoving, yet undeniably aware.
+
+                           The eerie silence is only broken by the faint rustling of fabric and straw, though the air is perfectly still. 
+                           The feeling of eyes, hundreds of them, bears down on you, cold and hostile. Every scarecrow, with its empty gaze, 
+                           seems to be daring you to glance away for just a moment longer, as if they're waiting for the right instant to move.
+
+                           The exit to the clearing is far off, and the rows of scarecrows seem endless. Each one that you pass feels closer than the last, 
+                           and the further you go, the more the silence presses in, the more the field seems to come alive with unseen movements. 
+                           You quicken your pace, heart racing, but the turning heads continue to track you, watching, waiting.
+                      """)
+    clearing13 = Room("""
+                           You step into the clearing, and your senses are immediately overwhelmed by the thick, sickly sweet smell that hangs in the air. 
+                           The ground beneath your feet is soft, spongy, covered entirely by a carpet of dull green moss that gives with every step. 
+                           All around you, mushrooms of various shapes and sizes rise from the mossy floor, their pale caps blending into the muted gloom of the forest. 
+                           Some are tall and thin, others squat and bulbous, but all are dull, as though life has been drained from their colours. The path forward lies “north”.
+                           
+                           The air is dense, almost oppressive, with an underlying rot that clings to the back of your throat. 
+                           The mushrooms sickly forms twist and bend in ways that seem unnatural, their stems curling like gnarled fingers reaching up from the earth. 
+                           The longer you stand, the more it feels as though the clearing is somehow alive, the very air around you buzzing with an eerie energy.
+                           
+                           In the centre of the clearing, however, your eye is drawn to something that stands out amidst the gloom, a bright green moss covered rock. 
+                           Perched atop the rock are two mushrooms, starkly contrasting with the dull, lifeless surroundings. One is “white” with vivid red spots on its cap, 
+                           the colour almost too vibrant for this dreary place, while the other is “golden”, dotted with delicate white spots, 
+                           its surface shimmering faintly in the dim light. They seem out of place, as though they don't belong to this forest, 
+                           their colours glowing with an unnatural brilliance.
+                           
+                           The mushrooms seem to hold a  hidden secret, as if they hold a secret not meant for the eyes of mere mortals. 
+                           You can't help but feel that whatever choice you make regarding these strange mushrooms could alter your fate, for better or worse.
+                           
+                           The only path is "North".
+                      """)
+    clearing14 = Room("""
+                           You step into a peculiar clearing, and immediately your eyes are drawn to the long, thin branches stretching from trees on all sides. 
+                           From these branches hang countless shadowy figures, their forms resembling people suspended in mid-air, 
+                           motionless yet swaying gently despite the eerie absence of wind. The shadows seem to ripple with the faintest suggestion of movement, 
+                           their features indistinguishable but unmistakably human like.
+
+                           As you cautiously move forward, a chilling realisation dawns on you, the hanging shadows are watching you. 
+                           Though you never see them turn, you feel their gaze, cold and empty, following your every step. 
+                           The silence in the clearing is heavy and suffocating, pressing down like a weight on your chest, broken only by the occasional creak of a branch, 
+                           brittle and fragile, as if at any moment it could snap, sending the figures crashing to the ground.
+
+                           The stillness is unnerving, each step echoing in the unnatural quiet, and you can't shake the feeling that the shadows are waiting for something, 
+                           waiting for you.
+                      
+                           The only parth forward is "North".
+                      """)
+    clearing15 = Room("""
+                           Stepping into the clearing, you immediately notice the dense canopy overhead, the tree tops weaving together so tightly that only faint, 
+                           sickly light filters through. Looking down, the ground is a patchwork of different grasses, moss, and even fur, grotesquely stitched together 
+                           as though the very earth had been sliced apart and sewn back in a crude and unnatural manner. The seams between these patches pulse faintly, 
+                           as if something beneath the surface is alive, struggling to break free.
+
+                           The trees surrounding the clearing are equally disturbing, their trunks marred by ragged, stitched wounds, oozing thick, 
+                           dark sap like the blood of a dying creature. As you step deeper into the clearing, an unsettling sensation grips you, an invisible tug, 
+                           gentle at first but growing stronger with each step, pulling you toward the heart of the clearing. 
+                           It's as if invisible threads are slowly wrapping themselves around you, dragging you forward.
+
+                           In the centre of this twisted landscape stands a single, towering tree. Its bark is tangled with strands of thread and bones, 
+                           intricately woven into horrifying designs. The bones rattle softly, a whisper in the unnatural stillness, 
+                           and the threads stretch taut across the bark, pulling the tree into a grotesque and unnatural shape. You feel the pull grow stronger, 
+                           and though your instincts scream to turn back, you are inexorably drawn toward the looming tree and whatever terrible secret it holds. 
+                           
+                           Your only way forward is “North”.
+                      """)
 
     # Defined exits
     forest_entrance.set_exits({'north': 'cross_roads'})
@@ -558,6 +693,11 @@ def create_forest():
     clearing9.set_exits({'north': 'clearing11', 'west': 'clearing10', 'south': 'clearing7'})
     clearing10.set_exits({'south': 'clearing8', 'east': 'clearing9'})
     clearing11.set_exits({'north': 'clearing12', 'south': 'clearing9'})
+    clearing12.set_exits({'south': 'clearing11', 'west': 'clearing13', 'east': 'clearing14', 'north': '15'})
+    clearing13.set_exits({'north': 'clearing16'})
+    clearing14.set_exits({'north': 'clearing17'})
+    clearing15.set_exits({'north': 'clearing18'})
+    clearing16.set_exits({'east': 'clearing15'})
 
 
 
@@ -569,12 +709,16 @@ def create_forest():
     clearing4.set_items(['potion'])
     clearing5.set_items(['blue bottle', 'green bottle'])
     clearing6.set_items(['hat'])
+    clearing12.set_items(['robe'])
 
     # Enemies in rooms(clearings)
     clearing3.set_enemy(Enemy("The Great Forest Spider", 54))
     clearing4.set_enemy(Enemy("The Fire atronach", 65))
     clearing7.set_enemy(Enemy("Borzug the Dark Orc", 62))
     clearing10.set_enemy(Enemy("The Bonecrawler", 35))
+    clearing12.set_enemy(Enemy("The Scarecrow", 37))
+    clearing14.set_enemy(Enemy("The Shadow-man", 25))
+    clearing15.set_enemy(Enemy("The Thread-man", 13))
     
 
     
@@ -593,6 +737,13 @@ def create_forest():
         'clearing8': clearing8,
         'clearing9': clearing9,
         'clearing10': clearing10,
+        'clearing11': clearing11,
+        'clearing12': clearing12,
+        'clearing13': clearing13,
+        'clearing14': clearing14,
+        'clearing15': clearing15,
+        'clearing16': clearing16,
+        'clearing17': clearing17,
     }
 
     return forest_map
