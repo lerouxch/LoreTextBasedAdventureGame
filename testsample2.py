@@ -619,8 +619,9 @@ def create_forest():
                            each one standing crooked and lifeless among the tall, dry grass. Their bodies are fashioned from twisted, rotting wood and faded cloth, 
                            and their heads are a grotesque mix of sacks, bones, and masks, all with tattered hats perched on top. 
                            Their faces are distorted, painted in crude, unnatural expressions, some smiling, others glaring with hollow, 
-                           empty eyes. You see the path breaks off into three directions, “North”, “East” and “West”. On an empty pole in more or less of the centre of the 
-                           clearing, you see an old "robe" hanging on the rotting pole. Could it be? Could it be the mages robe?
+                           empty eyes. You see the path breaks off into three directions, “North”, “East” and “West”, you must choose your path wisely. 
+                           On an empty pole in more or less of the centre of the clearing, you see an old "robe" hanging on the rotting pole. 
+                           Could it be? Could it be the mages robe?
 
                            The air is still and heavy, with no breeze to stir the grass or the crows perched in the distance. 
                            As you cautiously begin walking through the field, the overwhelming sense that you are being watched creeps over you.
@@ -716,6 +717,80 @@ def create_forest():
 
                            The only way ahead is a path that veers to the “East”.
                       """)
+    clearing17 = Room("""
+                           You step into the clearing, and immediately the air feels unnaturally still, as if the forest itself is holding its breath. 
+                           There's a suffocating quiet all around, broken only by the faint rustling of leaves in the distance, far too soft to be comforting. 
+                           Your path continues to the “east”, but the stillness of the clearing draws your gaze toward the centre, where a perfectly still, 
+                           reflective pool of water lies, undisturbed and eerily pristine.
+
+                           The surface is so smooth that it mimics a mirror, reflecting the dense canopy of trees above with unsettling clarity. 
+                           But as you approach, something begins to feel wrong. The trees reflected in the pool are not the same as the ones you see overhead in the water, 
+                           they are barren, their limbs twisted and jagged, stripped of life. They look tortured, like frozen silhouettes of agony, 
+                           sharp angles reaching up in anguish.
+
+                           Your heart quickens as you glance at your reflection in the water. At first, it looks like you, but something is off. 
+                           The figure in the pool doesn't move in sync with your actions. When you step forward, it lags behind, its movements jerky and deliberate. 
+                           Its eyes, dark and hollow pits, bore into you from the still surface, unblinking and cold. A shiver races up your spine as you notice it, the smile. 
+                           It begins as a subtle twitch at the corner of its lips, then slowly grows into a twisted, malevolent grin, wide and unnatural, 
+                           as if the figure takes pleasure in watching you squirm.
+
+                           You can't look away. As you cautiously circle the pond, its movements grow more erratic, the smile twisting into something grotesque and monstrous. 
+                           It watches you, its dark eyes tracking your every move, and the longer you stare, the more it seems to warp, its limbs elongating, 
+                           its head tilting at unnatural angles. The reflection seems to revel in your discomfort, as if taunting you, 
+                           a malevolent force trapped beneath the surface.
+
+                           Your breath quickens, and as you take a step back, the figure lunges forward in the reflection, though the water remains still and undisturbed. 
+                           The smile widens, and for a moment, it feels like the reflection is just waiting for the right moment to break free.
+                      """)
+    clearing18 = Room("""
+                           You step into the clearing, the oppressive weight of the forest behind you feels even heavier now, as if the trees themselves are watching, 
+                           waiting. The air here is colder, biting at your skin despite the lack of wind. The light that manages to seep through the canopy above is muted and sickly, 
+                           casting everything in an unnatural, greenish hue. A nauseating scent of decay and rot lingers in the air, and every breath feels wrong, 
+                           like you're inhaling something that doesn't belong. You see the dark path continues "north".
+
+                           The trees surrounding the clearing twist in unnatural ways, their branches gnarled and contorted into claw-like shapes that seem to reach toward you. 
+                           Their bark is blackened and cracked, oozing dark sap that drips like blood onto the ground. Some of the trunks have deep, jagged gouges in them, 
+                           as though something large and clawed had taken its fury out on them. The silence is deafening, the usual sounds of the forest utterly absent, 
+                           replaced by a low, almost imperceptible hum, like the very air is vibrating with dark energy.
+
+                           In the centre of the clearing stands a massive, crooked tree, ancient and imposing, its trunk twisted and bloated with tumours of wood that pulse faintly, 
+                           as though alive. Bones, animal and human alike, are woven into the roots, bleached white and cracked, some hanging from the lower branches, 
+                           gently swaying though there is no breeze. Scattered at the base of the tree are crude, makeshift dolls made from sticks and cloth, 
+                           their faces crudely stitched with dried sinew, each one contorted into a look of pain or fear. They seem to stare at you, almost pleading.
+
+                           The very ground beneath your feet feels unnatural, squelching softly as you step forward. The grass is sparse and blackened, 
+                           patches of grey moss clinging to the soil like festering wounds. As you move closer to the tree, you notice the faint outline of a 
+                           circular symbol carved into the earth, nearly obscured by grime and rot. 
+                           The longer you stand in the clearing, the heavier your limbs feel, like something is slowly draining your energy, pulling it into the earth.
+
+                           Above, a murder of crows sits motionless in the higher branches, their beady eyes fixed on you, their presence unnerving and unnatural. 
+                           Not one of them makes a sound. They simply watch, their gaze heavy with malevolent intent.
+
+                           Every part of this place whispers that you are close. The air is thick with her presence, you can feel it seeping into your skin, 
+                           burrowing into your mind. You are nearing the witch's lair, and the forest itself seems to be warning you with every twisted branch and hollow-eyed doll.
+                      """)
+    clearing19 = Room("""
+                           You walk down the dark, overgrown path and break into a clearing. The air is heavy with a musty stillness, as if time itself has abandoned this place. 
+                           The first thing that catches your eye is the outline of an old cobblestone house, its structure barely holding on as the dense and ever-hungry 
+                           undergrowth of the forest slowly swallows it whole. Moss clings to the crumbling walls, and vines snake through every crack, 
+                           as if the forest is greedily reclaiming what was once its own.
+
+                           To your right, you notice an old water well, its wooden frame rotted and leaning to one side, the bucket long since decayed. 
+                           The stone rim is cracked, and thick tendrils of ivy crawl up from the depths, as if something beneath is trying to escape. 
+                           Nearby, rotting fence posts jut out from the earth, marking the outline of what might have been an animal enclosure. 
+                           The once vibrant life that thrived here has long since faded, leaving only faint echoes of what used to be.
+
+                           Stepping into the rubble of the house, the floor crunches beneath your feet. The roof has long since caved in, 
+                           and what remains of the walls barely stands. As you carefully make your way deeper inside, you stumble upon a scene that sends a chill down your spine. 
+                           In the centre of the room, a family of skeletons lies in a macabre embrace, their bones intertwined in what looks like a final act of love or despair. 
+                           Thin, winding vines have threaded through their bones, twisting around them like chains, as though the forest has claimed them for its own. 
+                           The sight is both eerie and tragic, and you can't help but wonder what unspeakable fate befell them here.
+
+                           The silence in the clearing is unnerving, broken only by the faint rustle of leaves. The forest seems alive, watching, waiting. 
+                           A sense of unease settles over you as you realise this place holds secrets, dark ones that linger in the shadows of this long abandoned homestead.
+
+                           To the “north”, you notice a narrow path, barely visible through the dense underbrush. It winds away from the ruins, beckoning you onward.
+                      """)
 
     # Defined exits
     forest_entrance.set_exits({'north': 'cross_roads'})
@@ -736,6 +811,9 @@ def create_forest():
     clearing14.set_exits({'north': 'clearing17'})
     clearing15.set_exits({'north': 'clearing18', 'south': 'clearing12'})
     clearing16.set_exits({'east': 'clearing15'})
+    clearing17.set_exits({'west': 'clearing15'})
+    clearing18.set_exits({'south': 'clearing15', 'north': 'clearing19'})
+    clearing19.set_exits({'south': 'clearing18', 'north': 'clearing20'})
 
 
 
@@ -751,6 +829,8 @@ def create_forest():
     clearing13.set_items(['white', 'golden'])
     clearing16.set_items(['apple'])
 
+    
+    
     # Enemies in rooms(clearings)
     clearing3.set_enemy(Enemy("The Great Forest Spider", 54))
     clearing4.set_enemy(Enemy("The Fire atronach", 65))
@@ -759,6 +839,7 @@ def create_forest():
     clearing12.set_enemy(Enemy("The Scarecrow", 37))
     clearing14.set_enemy(Enemy("The Shadow-man", 25))
     clearing15.set_enemy(Enemy("The Thread-man", 13))
+    clearing17.set_enemy(Enemy("The Water-Shadow", 12))
     
 
     
@@ -784,6 +865,8 @@ def create_forest():
         'clearing15': clearing15,
         'clearing16': clearing16,
         'clearing17': clearing17,
+        'clearing18': clearing18,
+        "clearing19": clearing19,
     }
 
     return forest_map
