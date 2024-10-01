@@ -791,6 +791,25 @@ def create_forest():
 
                            To the “north”, you notice a narrow path, barely visible through the dense underbrush. It winds away from the ruins, beckoning you onward.
                       """)
+    clearing20 = Room("""
+                           You break through the dense underbrush and find yourself in a clearing teeming with unnatural plants. 
+                           Each one seems to have been grown with a dark purpose, thorns curl into grotesque shapes, and their leaves twist unnaturally, as if in pain. 
+                           The flowers emit a foul, sickly-sweet scent that clings to the air, making it hard to breathe. Beneath your feet, the ground feels disturbingly loose, 
+                           like freshly turned earth hiding secrets. Scattered among the roots and tangled undergrowth, bones both human and animal stick out, 
+                           partially buried in the soil, a macabre fertiliser for this sinister garden.
+
+                           The ground here is strangely tended to, suggesting someone or something, has been maintaining this dreadful place. 
+                           This must be the witch's garden. The sickening realisation makes your skin crawl.
+
+                           In the centre of the clearing stands a dark, grey statue, draped in a tattered black cloth that flutters faintly, though no breeze touches the air. 
+                           Its eyes, hollow and made of black stone, seem to follow your every movement, watching, waiting. As you cautiously approach, you hear the soft, 
+                           unsettling whispers of the flowers, hissing your name into the quiet, their voices barely audible but unmistakable. 
+                           The vines along the path begin to stir, writhing like serpents, their creeping tendrils slowly reaching toward you, drawn by your presence, 
+                           alive with malice.
+
+                           You spot the path veering off to the “west”, but you know leaving this cursed garden won't be easy, the garden, it seems, doesn't want to let you go.
+                           You realise you are approaching your horrible destination, the need to find the staff is dire, you don't know how much more of this you can take.
+                      """)
 
     # Defined exits
     forest_entrance.set_exits({'north': 'cross_roads'})
@@ -814,6 +833,7 @@ def create_forest():
     clearing17.set_exits({'west': 'clearing15'})
     clearing18.set_exits({'south': 'clearing15', 'north': 'clearing19'})
     clearing19.set_exits({'south': 'clearing18', 'north': 'clearing20'})
+    clearing20.set_exits({'west': 'clearing21'})
 
 
 
@@ -840,6 +860,7 @@ def create_forest():
     clearing14.set_enemy(Enemy("The Shadow-man", 25))
     clearing15.set_enemy(Enemy("The Thread-man", 13))
     clearing17.set_enemy(Enemy("The Water-Shadow", 12))
+    clearing20.set_enemy(Enemy("A Living Vine", 5))
     
 
     
@@ -866,7 +887,8 @@ def create_forest():
         'clearing16': clearing16,
         'clearing17': clearing17,
         'clearing18': clearing18,
-        "clearing19": clearing19,
+        'clearing19': clearing19,
+        'clearing20': clearing20,
     }
 
     return forest_map
