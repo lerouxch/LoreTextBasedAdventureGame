@@ -237,6 +237,30 @@ class Player:
 
             This added 15 much needed health points.
                       """)
+            if item == 'staff':
+                self.health += 110
+                print("""
+            You gently pull the staff from the heart of the cherry blossom tree, its silvery light pulsing in your hand. As you do, the tree slowly and gracefully closes, 
+            sealing itself back up, as if it had been guarding this treasure for countless ages. The staff feels warm and alive, radiating the same protective 
+            and ancient magic that fills this peaceful oasis.
+            
+            You know immediately, this is the mage's staff, the very object you've been searching for, the key to your survival and the salvation of this cursed land. 
+            The power coursing through the staff resonates with the magic that created this sanctuary, a shield against the creeping darkness of the forest. 
+            This staff had stayed here, rooted in the earth, drawing strength and light from the cherry blossom tree to keep the malevolent forces at bay, 
+            waiting for someone worthy to wield it once again.
+            
+            This oasis, this sacred grove, was created not just as a place of refuge, but as a beacon of hope, a final stand against the evil that has corrupted the forest. 
+            The staff, long forgotten, had protected itself, waiting for the one who would bring an end to the darkness that has plagued this land for far too long.
+
+            As you grip the staff, the weight of your journey still presses heavily on your shoulders, the trials, the dangers, the dark creatures you've faced. 
+            But now, with the staff in your hand, you feel a surge of hope that you haven't felt in what seems like ages. The light that the staff emanates 
+            pushes back the shadows of fear that have haunted you, filling you with a newfound resolve.
+
+            You've found the light you so desperately needed. You've found your chance to end this. With the mage's staff, you now carry the power to 
+            defeat the evil that has claimed this land and find your way back to freedom. The path ahead will be hard, but you know now that you are not alone.
+
+            You've found the light in the darkness, and it's time to wield it
+                      """)
              
         else:
             print(f"{item} is not here.")
@@ -810,6 +834,86 @@ def create_forest():
                            You spot the path veering off to the “west”, but you know leaving this cursed garden won't be easy, the garden, it seems, doesn't want to let you go.
                            You realise you are approaching your horrible destination, the need to find the staff is dire, you don't know how much more of this you can take.
                       """)
+    clearing21 = Room("""
+                           Stepping into the clearing, you find it bathed in a thick, unnatural fog that clings to the ground, curling around your ankles like cold, 
+                           dead fingers. The eerie stillness of the air feels suffocating, every breath heavy with the scent of damp earth and decay. 
+                           In the distance, faint flickering lights catch your eye will-o'-wisps, their ghostly glow dancing just out of reach, tempting you forward. 
+                           Beneath the swirling mist, a faint whispering drifts in the air, distant voices murmuring ominously, urging you to turn back.
+                    
+                           A sick joke, as the path you entered from has vanished, swallowed by the fog. The deeper you venture, the thicker the fog becomes, 
+                           twisting your sense of direction. The towering trees around you fade into shadowy shapes, barely distinguishable from the heavy mist. 
+                           It's impossible to tell if you're still in the forest or have stumbled into some otherworldly realm, where reality bends and time feels distorted.
+
+                           Just as disorientation begins to take hold, you notice a faint glow ahead, a possible exit to the “north”, 
+                           though reaching it feels like a perilous gamble.
+                      """)
+    clearing22 = Room("""
+                           Stepping through the dense fog, the dark, winding path stretches endlessly before you, twisting unnaturally as though it's alive, 
+                           bending reality itself. Your eyes strain against the shifting shadows, and for a moment, it seems as if the path stretches infinitely ahead, 
+                           an illusion that makes your heart race. Blinking hard, you rub your eyes, but when your vision clears, the same winding path lies ahead, 
+                           unchanged yet unsettling.
+
+                           You emerge into a clearing, and the sight before you sends a chill down your spine. Twisted wooden totems stand in a perfect circle at the clearing's 
+                           centre, each one carved with disturbingly realistic human faces. The faces are warped with expressions of sorrow, anger, and terror, 
+                           their eyes hollow, yet they seem to bore into your soul. Their grimaces are frozen in eternal anguish, as though these totems have witnessed 
+                           something unspeakable.
+
+                           The ground around the totems is littered with small, crude dolls made of straw and bone, their fragile limbs tied together with frayed, 
+                           rotten thread. The dolls lie scattered, but their presence feels intentional, like forgotten offerings or warnings. The air is disturbingly still, 
+                           unnaturally devoid of wind, as if even nature refuses to touch this cursed place. Yet, despite the stillness, the totems creak and sway, 
+                           ever so slightly, as if moved by some unseen force.
+
+                           At the centre of the totem circle lies a stone slab, dark and stained with what appears to be dried blood, its surface rough and weathered. 
+                           The metallic scent of iron lingers heavily in the air, thick and oppressive, a reminder of the violent acts committed here. 
+                           You can almost hear the echo of screams in the silence, the horror of past rituals seeping into the very ground beneath your feet.
+
+                           The longer you stand there, the stronger the feeling becomes, the dolls and totems are watching you, their twisted gazes and hollow eyes
+                           tracking your every move. The clearing feels like a trap, a place where the veil between worlds is thin, and you fear the horrors that 
+                           have unfolded here may not yet be over. 
+                      
+                           You see the paths veers toward the "east".
+                      """)
+    clearing23 = Room("""
+                           You step into the clearing, the air immediately thick with the familiar stench of rot and decay. A sense of dread creeps over you as your eyes 
+                           fall upon a group of grey stone statues, their faces twisted in expressions of utter horror and fear. Each figure is frozen in mid-motion, 
+                           their arms outstretched, all pointing, some toward the path to the “north”, others toward the path to the “east”. 
+                           Their contorted faces seem to plead with you, silently warning you of the peril ahead.
+
+                           Looking closer, you can feel a dark energy emanating from the northern path. The darkness there is impenetrable, thick and oppressive, 
+                           and it reeks of evil, sending a shiver down your spine. You sense that whatever lies beyond the darkness is not something you are eager to face, 
+                           yet the statues pointing north seem to beckon you toward that very path, as if urging you into the unknown abyss.
+
+                           Turning your gaze to the eastern path, you notice a stark contrast. A strange light breeze brushes against your skin, 
+                           carrying a hint of something refreshing, a sensation you haven't felt in this forest for what feels like an eternity. 
+                           There's also a faint glow in the distance, a warm and inviting light, unlike anything you've encountered in this cursed place. 
+                           It feels unnaturally out of place, yet somehow comforting. The statues pointing east appear more relaxed, as if they, too, are drawn to the light.
+
+                           The choice looms before you: venture into the malevolent darkness or follow the promise of light and respite. 
+                         
+                           But in this forest, nothing is as it seems.
+                      """)
+    clearing24 = Room("""
+                           You step into the clearing, and a gust of fresh air fills your lungs with a renewed vigour. For the first time in what feels like an eternity, 
+                           you look up and see a break in the canopy, revealing a bright blue sky and golden sunshine streaming down. It's a sight you had almost forgotten, 
+                           the warmth and light of the day, after being trapped in the oppressive gloom of the forest for so long. 
+                           Time has become meaningless in this cursed place, and for the first time, you remember what it feels like to be alive. 
+                           You notice that the only path is “west” the way you came.
+
+                           Before you stands a singular cherry blossom tree, its branches adorned with blossoms of the purest light pink, their beauty almost ethereal. 
+                           The ground is blanketed with fallen petals, which swirl and dance in the soft breeze, gracefully moving as though in celebration of your arrival. 
+                           The tree, glowing with an inner radiance, seems to be pushing back the darkness, creating a haven of light and life amidst the surrounding decay. 
+                           It's as if this tree is the heart of some ancient magic, holding the horrors of the forest at bay.
+
+                           You can feel it, a profound sense of peace that soothes your weary soul, a momentary respite from the fear and exhaustion that has followed 
+                           you throughout this journey. There is a powerful magic here, one that feels benevolent and pure.
+
+                           As you step closer to the tree, the ground begins to tremble beneath your feet. You pause, watching in awe as the cherry blossom tree begins to part, 
+                           its trunk gently splitting down the middle as though welcoming you. There is no violence in the movement, only grace and reverence. 
+                           Inside, nestled within the tree's glowing heart, is a "staff", shimmering with a silvery light that pulses with energy.
+                      """)
+    clearing25 = Room("""
+                           
+                      """)
 
     # Defined exits
     forest_entrance.set_exits({'north': 'cross_roads'})
@@ -834,6 +938,10 @@ def create_forest():
     clearing18.set_exits({'south': 'clearing15', 'north': 'clearing19'})
     clearing19.set_exits({'south': 'clearing18', 'north': 'clearing20'})
     clearing20.set_exits({'west': 'clearing21'})
+    clearing21.set_exits({'north': 'clearing22'})
+    clearing22.set_exits({'east': 'clearing23'})
+    clearing23.set_exits({'north': 'clearing25', 'east': 'clearing24'})
+    clearing24.set_exits({'west': 'clearing23'})
 
 
 
@@ -848,6 +956,7 @@ def create_forest():
     clearing12.set_items(['robe'])
     clearing13.set_items(['white', 'golden'])
     clearing16.set_items(['apple'])
+    clearing24.set_items(['staff'])
 
     
     
@@ -861,6 +970,8 @@ def create_forest():
     clearing15.set_enemy(Enemy("The Thread-man", 13))
     clearing17.set_enemy(Enemy("The Water-Shadow", 12))
     clearing20.set_enemy(Enemy("A Living Vine", 5))
+    clearing22.set_enemy(Enemy("The Small Doll Horde", 10))
+
     
 
     
@@ -889,6 +1000,11 @@ def create_forest():
         'clearing18': clearing18,
         'clearing19': clearing19,
         'clearing20': clearing20,
+        'clearing21': clearing21,
+        'clearing22': clearing22,
+        'clearing23': clearing23,
+        'clearing24': clearing24,
+        'clearing25': clearing25,
     }
 
     return forest_map
