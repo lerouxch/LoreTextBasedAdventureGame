@@ -912,7 +912,18 @@ def create_forest():
                            Inside, nestled within the tree's glowing heart, is a "staff", shimmering with a silvery light that pulses with energy.
                       """)
     clearing25 = Room("""
-                           
+                           You walk into the clearing, and the sight before you sends a cold shiver down your spine. All around, bodies hang from the twisted branches, 
+                           some are fresh, their lifeless forms still dripping with blood, while others are rotting, the flesh sagging and discoloured. 
+                           The oldest ones are mere skeletons, held together by threads of sinew, the last remnants of what once was. Among the hanging forms, 
+                           you see the corpses of humans, animals, and grotesque mutations of both, twisted abominations that fill you with horror.
+
+                           The air is thick with the overwhelming stench of decay, and the unmistakable metallic tang of blood fills your nostrils, a scent that has 
+                           become disturbingly familiar on this cursed journey. Beneath the hanging corpses, pools of blood, some fresh and gleaming, others dried and crusted,
+                           stain the earth, painting a gruesome picture of the horrors that occurred here.
+
+                           In the distance, a dark, foreboding path stretches to the "north", its entrance framed by the macabre display of death. 
+                           You can sense the evil emanating from it, pulling you closer yet filling you with dread. Every instinct tells you this is a place of unspeakable cruelty, 
+                           but it is also clear that your journey must continue forward, even through the blood-soaked horrors that lie ahead.
                       """)
 
     # Defined exits
@@ -942,6 +953,7 @@ def create_forest():
     clearing22.set_exits({'east': 'clearing23'})
     clearing23.set_exits({'north': 'clearing25', 'east': 'clearing24'})
     clearing24.set_exits({'west': 'clearing23'})
+    clearing25.set_exits({'north': 'clearing26'})
 
 
 
