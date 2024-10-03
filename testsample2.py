@@ -259,7 +259,7 @@ class Player:
             You've found the light you so desperately needed. You've found your chance to end this. With the mage's staff, you now carry the power to 
             defeat the evil that has claimed this land and find your way back to freedom. The path ahead will be hard, but you know now that you are not alone.
 
-            You've found the light in the darkness, and it's time to wield it
+            You've found the light in the darkness, and it's time to wield it.
                       """)
              
         else:
@@ -288,7 +288,7 @@ class Player:
                     self.defend(enemy)
             elif action == 'flee':
                 print("You flee down the path to the previous clearing!")
-                self.move('south', forest_map)  # Assumes there's a way back
+                self.move('south', forest_map)  # Assuming there's a way back...
                 return
             else:
                 print("Command not valid.")
@@ -925,6 +925,36 @@ def create_forest():
                            You can sense the evil emanating from it, pulling you closer yet filling you with dread. Every instinct tells you this is a place of unspeakable cruelty, 
                            but it is also clear that your journey must continue forward, even through the blood-soaked horrors that lie ahead.
                       """)
+    clearing26 = Room("""
+                           You step into the final clearing, and the air grows impossibly still, suffocating in its silence. The forest behind you seems to recede into darkness, 
+                           as if retreating from what lies ahead. The clearing itself is a dead zone, no plants grow here, no birds sing. 
+                           The ground is barren and cracked, with jagged stones jutting out at odd angles, resembling the bones of some long-dead creature. 
+                           The sky overhead is unnaturally dark, with clouds swirling ominously, as though the clearing is the very heart of the storm that rages within the forest.
+                           
+                           At the far end of the clearing stands the witch's lair. It is an ancient, crumbling stone structure, more like a twisted monument than a house. 
+                           The walls are covered in thick, black vines, which pulse and writhe like living things, choking the building in their grip. 
+                           The stones themselves are slick with a dark, tar-like substance that drips slowly to the ground, staining the earth beneath. 
+                           Skulls and bones are embedded into the walls, twisted into horrifying shapes, their empty eyes staring out at you with hollow malice.
+                           
+                           A towering black tree stands near the entrance, its twisted branches bare and skeletal, reaching toward the sky like claws. 
+                           Crows, unnaturally large, perch on the branches, their beady eyes following your every move. Occasionally, one lets out a low, 
+                           guttural croak that echoes ominously through the clearing.
+
+                           In front of the lair, a wide circle of dark, scorched earth forms an unnatural boundary, as if the land itself has been cursed. 
+                           Strange, glowing symbols are carved into the ground, flickering with a sickly green light. The symbols pulse in time with your heartbeat, 
+                           drawing you closer, even though every instinct screams to turn back. From within the lair, you can hear a faint, unnatural humming, 
+                           a droning sound that seems to come from all directions, vibrating through your very bones.
+
+                           A rotting wooden door creaks open as if beckoning you in, revealing only inky darkness beyond. The wind picks up for the first time, 
+                           carrying with it the unmistakable scent of decay and death, tinged with something sweet and foul, like rotting fruit.
+
+                           Above the door, etched into the stone, is an ancient sigil, the mark of the witch. It pulses faintly with dark energy, radiating malevolence. 
+                           You feel it watching you, weighing your soul. This is it, the end of your journey, the heart of the witch's power. 
+                           Every inch of this place reeks of her foul magic, and stepping any closer feels like willingly walking into the jaws of death.
+
+                           But you have no choice. This is where the final battle begins.
+
+                      """)
 
     # Defined exits
     forest_entrance.set_exits({'north': 'cross_roads'})
@@ -983,6 +1013,7 @@ def create_forest():
     clearing17.set_enemy(Enemy("The Water-Shadow", 12))
     clearing20.set_enemy(Enemy("A Living Vine", 5))
     clearing22.set_enemy(Enemy("The Small Doll Horde", 10))
+    clearing26.set_enemy(Enemy("The Witch", 190))
 
     
 
@@ -1017,6 +1048,7 @@ def create_forest():
         'clearing23': clearing23,
         'clearing24': clearing24,
         'clearing25': clearing25,
+        'clearing26': clearing26,
     }
 
     return forest_map
@@ -1040,9 +1072,38 @@ def combat_loop(player, enemy):
         print("You have been defeated!")
         return True   #Player loses
     elif enemy.health <= 0:
-        print(f"You have defeated {enemy.name}!")
-        player.location.enemy = None
-        return False  #Player Wins
+        if enemy.name == "The Witch":
+            print("""
+                                    The witch lets out a final, blood curdling screech as her dark spirit, black and twisted, begins to tear itself from her frail, 
+                                    ancient body. Her form, once a source of dread, slowly crumbles to dust, as if the weight of centuries of evil and torment are 
+                                    collapsing upon her at last. Piece by piece, her body disintegrates, her dark cloak slipping from her shoulders and falling to 
+                                    the ground with a soft, hollow thud, leaving only a swirling cloud of ash in its wake.
+
+                                    As the dust settles, the change is immediate, like the forest itself has taken a deep breath after eons of suffocating under her curse. 
+                                    The once looming, oppressive darkness begins to peel away, and the trees, twisted and rotting, begin to stir. Leaf by leaf, their brittle, 
+                                    blackened limbs shift, turning a soft and vibrant spring green. The ominous, churning sky, so long veiled in thick clouds and eternal gloom, 
+                                    begins to lighten. Rays of sunshine pierce through, dissolving the heavy clouds, transforming the dark canopy above into a brilliant, 
+                                    clear blue sky.
+
+                                    Beneath your feet, the dead, cracked earth trembles. Sprouts of green grass push through the desolate soil, and wildflowers, untouched by
+                                    beauty for ages, bloom in vibrant colours along the once barren forest floor. The heavy stench of decay that had suffused the air lifts, 
+                                    replaced by the fragrant, clean scent of fresh earth and new life. Birdsong, once lost to the echoes of terror, returns, soft melodies 
+                                    filling the air where the sinister silence once reigned.
+
+                                    In the distance, you hear a rumble as the witch's lair, once a monument to her dark power, begins to collapse. The stones fall into ruin, 
+                                    quickly swallowed by creeping vines and blossoming flowers, as if the forest itself is eager to rid the land of any reminder of her evil. 
+                                    The vines, thick and lively, snake around the rubble, reclaiming the space, while bushes heavy with colourful blooms spring up where the 
+                                    walls once stood.
+
+                                    The wind, cool and sweet, flows through the clearing, sweeping away the last remnants of the witch's influence. The forest, so long trapped
+                                    in her grasp, breathes freely once more, vibrant and full of life. As you stand in the midst of this transformation, the weight of the journey
+                                    lifts from your shoulders, replaced by a sense of peace and renewal. The curse is broken, and with it, the forest has been reborn.
+
+                  """)
+        else:
+            print(f"You have defeated {enemy.name}!")
+            player.location.enemy = None
+            return False  #Player Wins
 
 
 def game_loop(player, forest_map):
