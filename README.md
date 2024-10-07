@@ -1,12 +1,22 @@
-This is the first full project I was tasked with in my Computer Science professional certification. The task was to research, brainstorm and build a basic terminal game using Python. 
-It was quite a challenge for me as it was the first time I would be coding outside the academy’s platform.
+My First Python Project: A Text-Based Adventure Game
 
-I came up with the idea of building an old school style text based adventure game but with a lot more detail, almost as if you are walking through a book in a sense. I went with the fantasy theme.
+As part of my Computer Science professional certification, I recently completed my first full project, a task that challenged me to step outside the academy’s platform and write a Python program from scratch. 
+The goal was to research, brainstorm, and ultimately build a basic terminal-based game. After some thought, I decided to create an old-school text-based adventure game with a fantasy theme.
 
-The story follows an adventurer (you) who gets trapped in a dark forest under an evil witch's spell, the object is to navigate the forest and locate a staff which can be used to defeat the witch. 
-There are items that you can pick up and enemies to be defeated along the way.
+The idea was to craft an immersive experience, almost like walking through a book. The story follows you, an adventurer, who finds yourself trapped in a dark forest under the spell of an evil witch. 
+The objective is simple: navigate the forest and locate a magical staff to defeat the witch. Along the way, you’ll encounter dangerous enemies and find helpful items that can aid your journey.
 
-The other basic commands are “move”, “pick up”, “inventory” and “quit”.
-To navigate I used a system which uses the directions “North”, “South”, “East” and “West”.
-I also included combat mechanics for when you encounter an enemy along the way, the combat mechanics make use of the commands “attack” and “flee”. 
+Key Features:
 
+Basic Commands: Players can use commands like “move,” “pick up,” “inventory,” and “quit” to interact with the game.
+
+Directional Navigation: To move through the forest, you use cardinal directions: North, South, East, and West.
+
+Combat Mechanics: When you encounter an enemy, you have the choice to either “attack” or “flee,” adding a layer of strategy to the game.
+
+One of the most interesting challenges was implementing the combat mechanics and inventory system. Creating a dynamic system where the player can pick up items and use them later required a deeper understanding of how to manage variables and lists in Python.
+
+Overall, this project was a rewarding introduction to game development in Python. It pushed me to apply what I’ve learned in a more creative, hands-on way. 
+It was also a valuable experience in problem-solving, as I worked through bugs and found ways to bring my ideas to life.
+
+This was just the beginning, and I’m excited to continue learning and building more complex projects in the future!
